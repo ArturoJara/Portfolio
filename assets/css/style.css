@@ -184,11 +184,12 @@ h6,
 
 .readmore {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   padding: 10px 15px;
   font-size: 12px;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
+  background-color: #333;
   transition: 0.2s all ease;
   font-weight: 700;
 }
