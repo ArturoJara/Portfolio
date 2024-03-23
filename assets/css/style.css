@@ -35,16 +35,17 @@ h6,
 .section {
   padding: 3rem 0;
 }
-.section1 {
-  padding: 3rem 0;
+.littlerow2 {
+  border-radius: 10px;
+  padding: 40px;
   background-color: #F5F5F7;
+  
 }
 
 .littlerow {
   background-color: #009E46;
   border-radius: 10px;
   padding: 40px;
-  box-shadow: 1px 1px 40px rgba(60, 5, 90, .1);
   color: #eee;
 }
 
