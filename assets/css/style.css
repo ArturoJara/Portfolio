@@ -35,6 +35,10 @@ h6,
 .section {
   padding: 3rem 0;
 }
+.section1 {
+  padding: 3rem 0;
+  background-color: #F5F5F7;
+}
 
 .littlerow {
   background-color: #009E46;
