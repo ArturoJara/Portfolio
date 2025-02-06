@@ -104,7 +104,7 @@ h6,
   display: block;
   position: relative;
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
 
 .item .item-wrap:after {
