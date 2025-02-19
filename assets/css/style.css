@@ -153,7 +153,7 @@ h6,
 }
 
 .item .item-wrap:hover {
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 .item .item-wrap:hover img {
