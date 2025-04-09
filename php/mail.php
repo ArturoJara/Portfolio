@@ -1,6 +1,6 @@
 <?php
 $subject    = 'E-mail from example'; // Subject of your email
-$to         = 'email@example.com'; //Your e-mail address
+$to         = 'arturojara1994@gmail.com'; //Your e-mail address
 $headers    = 'MIME-Version: 1.0' . "\r\n" .
               'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 $message    = 'Name: ' . $_POST['name'] . ' <br/>' .
