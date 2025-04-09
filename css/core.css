@@ -1425,12 +1425,12 @@ textarea {
 }
 
 a {
-  color: #337ab7;
+  color: #4b4b4b;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #23527c;
+  color: #4b4b4b;
   text-decoration: underline;
 }
 
@@ -1660,12 +1660,12 @@ mark,
 }
 
 .text-primary {
-  color: #337ab7;
+  color: #4b4b4b;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #286090;
+  color: #4b4b4b;
 }
 
 .text-success {
@@ -4010,7 +4010,7 @@ fieldset[disabled] .btn-link {
 }
 
 .btn-link:hover, .btn-link:focus {
-  color: #23527c;
+  color: #4b4b4b;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -16698,7 +16698,7 @@ h3 {
 }
 
 h4 {
-  color: #2C55D5;
+  color: #333333;
   font-size: 1.5em;
 }
 
