@@ -1995,6 +1995,42 @@ pre code {
   }
 }
 
+.container2 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+.container2:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+.container2:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .container2 {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container2 {
+    width: 940px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container2 {
+    width: 1200px;
+  }
+}
+
+
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -16424,6 +16460,9 @@ img.x2 {
 .p-md {
   padding: 30px !important;
 }
+
+
+
 
 @media screen and (max-width: 768px) {
   .p-md {
