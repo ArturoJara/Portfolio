@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Arturo Jara - Ux Design Portfolio</title>
+    <title>Arturo Jara - UX Design Portfolio | Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="UX Design blog by Arturo Jara - Insights and articles about UX design">
+    <meta name="author" content="Arturo Jara">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../css/core.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <!-- inject:css-->
     <!-- endinject -->
+    
+    <!-- Scripts -->
     <script src="../js/assets/jquery.js"></script>
   </head>
   <body class="smooth-transition">
@@ -16,25 +22,22 @@
       <header>
         <div class="container">
           <div class="col-md-12 text-center">
-            <div class="nav-trigger">
+            <div class="nav-trigger" aria-label="Menu">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
             <ul class="navigation">
-              <li><a href="index.html">Work</a>
-              </li>
-              <li> <a href="about.html">About</a>
-              </li>
-              <li> <a href="blog.html" class="active">Blog</a>
-              </li>
-              <li> <a href="contact.html">Contact</a>
-              </li>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html" class="active">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-
         </div>
       </header>
+
+      <!-- Hero Section -->
       <section class="hero text-center">
         <div class="container">
           <div class="row">
@@ -44,47 +47,61 @@
           </div>
         </div>
       </section>
+
+      <!-- Blog Grid Section -->
       <section class="grid-container">
         <div class="container">
           <div class="row">
-            <div class="col-md-12"><a href="#" class="btn btn-default filter-trigger">Filter</a></div>
-            <div class="col-md-12 grid classic col-4"><a href="../pages/blog-single.html" class="item design">
-                <div class="thumb"><img alt="Your Alternative text" src="../images/blog/05.jpg">
+            <div class="col-md-12">
+              <button class="btn btn-default filter-trigger" aria-label="Filter blog posts">Filter</button>
+            </div>
+            <div class="col-md-12 grid classic col-4">
+              <a href="../pages/blog-single.html" class="item design">
+                <div class="thumb">
+                  <img alt="Blog post about UX design principles" src="../images/blog/05.jpg">
                   <div class="btn btn-default">Read article</div>
                 </div>
                 <div class="caption">
                   <div class="tag">18th of June 2016</div>
                   <h4>This is an example blog post</h4>
-                </div></a><a href="../pages/blog-single.html" class="item design">
-                <div class="thumb"><img alt="Your Alternative text" src="../images/blog/06.jpg">
+                </div>
+              </a>
+              <a href="../pages/blog-single.html" class="item design">
+                <div class="thumb">
+                  <img alt="Blog post about user research methods" src="../images/blog/06.jpg">
                   <div class="btn btn-default">Read article</div>
                 </div>
                 <div class="caption">
                   <div class="tag">18th of June 2016</div>
                   <h4>This is an example blog post</h4>
-                </div></a><a href="../pages/blog-single.html" class="item fashion">
-                <div class="thumb"><img alt="Your Alternative text" src="../images/blog/07.jpg">
+                </div>
+              </a>
+              <a href="../pages/blog-single.html" class="item fashion">
+                <div class="thumb">
+                  <img alt="Blog post about UI design trends" src="../images/blog/07.jpg">
                   <div class="btn btn-default">Read article</div>
                 </div>
                 <div class="caption">
                   <div class="tag">18th of June 2016</div>
                   <h4>This is an example blog post</h4>
-                </div></a><a href="../pages/blog-single.html" class="item books">
-                <div class="thumb"><img alt="Your Alternative text" src="../images/blog/08.jpg">
+                </div>
+              </a>
+              <a href="../pages/blog-single.html" class="item books">
+                <div class="thumb">
+                  <img alt="Blog post about design systems" src="../images/blog/08.jpg">
                   <div class="btn btn-default">Read article</div>
                 </div>
                 <div class="caption">
                   <div class="tag">18th of June 2016</div>
                   <h4>This is an example blog post</h4>
-                </div></a></div>
+                </div>
+              </a>
+            </div>
           </div>
-          <!--    <div class="row mt-xl">
-         <div class="col-md-6 col-md-offset-3">
-              <div class="pagination"><a href="#" class="disabled previous ion-ios-arrow-thin-left pull-left"></a><a href="../pages/blog.html" class="btn btn-default active">1</a><a href="../pages/blog.html" class="btn btn-default">2</a><a href="../pages/blog.html" class="btn btn-default">3</a><a href="../pages/blog.html" class="btn btn-default">4</a><a href="../pages/blog.html" class="btn btn-default">5</a><a href="#" class="next ion-ios-arrow-thin-right pull-right">  </a></div>
-            </div> 
-          </div>-->
         </div>
       </section>
+
+      <!-- Footer -->
       <footer class="bottom">
         <div class="container">
           <div class="row">
@@ -95,31 +112,41 @@
               <p>Mexico<br>Ensenada, Baja California 22785</p>
             </div>
             <div class="col-md-3 text-center">
-             <a href="mailto:arturojara1994@gmail.com"> <p >arturojara1994@gmail.com </a> <br>+52(646)226 84 58</p>
+              <p>
+                <a href="mailto:arturojara1994@gmail.com">arturojara1994@gmail.com</a><br>
+                +52(646)226 84 58
+              </p>
             </div>
             <div class="col-md-3 text-center">
               <ul class="social-links">
-                <li> <a href="https://www.behance.net/arturojara" target="_blank" class="fa fa-behance"></a></li>
-                <li> <a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" class="fa fa-linkedin"></a></li>
-                <li> <a href="images/Arturo Jara English CV.pdf" target="_blank" class="fa fa-file-pdf-o"></a></li>
+                <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
               </ul>
             </div>
-            <div class="col-md-12 text-center">&copy; Arturo Jara. All rights reserved. 
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>&copy; Arturo Jara. All rights reserved.</p>
+            </div>
           </div>
         </div>
-        
       </footer>
+
+      <!-- Filter Container -->
       <div class="filter-container">
         <div class="container">
           <div class="inner">
             <ul class="filters">
-              <li> <a href="#" data-filter="item" class="filter">All</a></li>
+              <li><a href="#" data-filter="item" class="filter">All</a></li>
               <li><a href="#" data-filter="design" class="filter">Design</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Scripts -->
     <script src="../js/assets/bootstrap.js"></script>
     <script src="../js/assets/imagesloaded.pkgd.min.js"></script>
     <script src="../js/assets/validation.js"></script>

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Arturo Jara - Ux Design Portfolio</title>
+    <title>Arturo Jara - UX Design Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="UX Design portfolio showcasing work by Arturo Jara, a UX designer based in Ensenada">
+    <meta name="author" content="Arturo Jara">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../css/core.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <!-- inject:css-->
     <!-- endinject -->
+    
+    <!-- Scripts -->
     <script src="../js/assets/jquery.js"></script>
   </head>
   <body class="smooth-transition">
@@ -16,95 +22,73 @@
       <header>
         <div class="container">
           <div class="col-md-12 text-center">
-            <div class="nav-trigger">
+            <div class="nav-trigger" aria-label="Menu">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
             <ul class="navigation">
-              <li><a href="index.html" class="active">Work</a>
-              </li>
-              <li> <a href="about.html">About</a>
-              </li>
-              <li> <a href="blog.html">Blog</a>
-              </li>
-              <li> <a href="contact.html">Contact</a>
-              </li>
+              <li><a href="index.html" class="active">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-
         </div>
       </header>
+
+      <!-- Hero Section -->
       <section class="hero text-center">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
               <ul class="social-links">
-                <li> <a href="https://www.behance.net/arturojara" target="_blank" class="fa fa-behance"></a></li>
-                <li> <a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" class="fa fa-linkedin"></a></li>
-                <li> <a href="images/Arturo Jara English CV.pdf" target="_blank" class="fa fa-file-pdf-o"></a></li>
+                <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
               </ul>
-              <h1>Ux Designer</h1>              
-              <p>Arturo Jara is a Ensenada-based UX designer<br>I’m driven by the power of thoughtful digital experiences <br> to solve  real-world problems at scale.</p>             
+              <h1>UX Designer</h1>              
+              <p>Arturo Jara is an Ensenada-based UX designer<br>I'm driven by the power of thoughtful digital experiences<br>to solve real-world problems at scale.</p>             
               <a href="about.html" class="btn btn-default">Read more</a>        
             </div>         
           </div>
         </div>
       </section>
+
+      <!-- Portfolio Grid Section -->
       <section class="grid-container">
         <div class="container">
           <div class="row">
-            <div class="col-md-12"><a href="#" class="btn btn-default filter-trigger">Filter</a></div>
+            <div class="col-md-12">
+              <button class="btn btn-default filter-trigger" aria-label="Filter portfolio items">Filter</button>
+            </div>
             
             <div class="col-md-12 grid classic">
-              
-                <a href="VerityPay.html" class="item books">
-                  <div class="thumb"><img alt="Your Alternative text" src="images/portfolio/Verity Pay.jpg"></div>
+              <a href="VerityPay.html" class="item books">
+                <div class="thumb">
+                  <img alt="Verity Pay - B2C Platform for juror payment" src="images/portfolio/Verity Pay.jpg">
+                </div>
                 <div class="caption">
                   <h4>Verity Pay</h4>
-                  <div class="tag">B2C Platform for juror payment - Ux Design</div>
-                </div></a>
+                  <div class="tag">B2C Platform for juror payment - UX Design</div>
+                </div>
+              </a>
 
-                <a href="SMSPayment.html" class="item design">
-                  <div class="thumb"><img alt="Your Alternative text" src="images/portfolio/SMSPayment.jpg"></div>
+              <a href="SMSPayment.html" class="item design">
+                <div class="thumb">
+                  <img alt="SMS Payment link for Verity Pay" src="images/portfolio/SMSPayment.jpg">
+                </div>
                 <div class="caption">
                   <h4>SMS Payment link Verity Pay</h4>
-                  <div class="tag">SMS Payment link for B2C Platform for juror payment - Ux Design</div>                
-                </div></a>
-                <!--
-                <a href="pages/work-single.html" class="item typography">
-                  <div class="thumb"><img alt="Your Alternative text" src="images/portfolio/ratespot.jpg"></div>
-                <div class="caption">
-                  <h4>Ratespot</h4>
-                  <div class="tag">Ux Ui Design &amp; Front End Development</div>
-                </div></a>
-                
-                <a href="pages/work-single.html" class="item books design">
-                  <div class="thumb"><img alt="Your Alternative text" src="images/portfolio/CeuxAppImage.jpg"></div>
-                <div class="caption">
-                  <h4>Ceux App</h4>
-                  <div class="tag">Ux Design</div>
-                </div></a>
-
-                <a href="pages/work-single.html" class="item books design">
-                  <div class="thumb"><img alt="Your Alternative text" src="images/portfolio/Medel.jpg"></div>
-                <div class="caption">
-                  <h4>Laboratorios Medel</h4>
-                  <div class="tag">Ux Design</div>
-                </div></a>
-
-                <a href="pages/work-single.html" class="item books design">
-                  <div class="thumb"><img alt="Your Alternative text" src="images/portfolio/Kare.jpg"></div>
-                <div class="caption">
-                  <h4>Kare</h4>
-                  <div class="tag">Ux Design</div>
-                </div></a>
-              -->
-                
-              </div>
+                  <div class="tag">SMS Payment link for B2C Platform for juror payment - UX Design</div>                
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- Footer -->
       <footer class="bottom">
         <div class="container">
           <div class="row">
@@ -115,26 +99,34 @@
               <p>Mexico<br>Ensenada, Baja California 22785</p>
             </div>
             <div class="col-md-3 text-center">
-             <a href="mailto:arturojara1994@gmail.com"> <p >arturojara1994@gmail.com </a> <br>+52(646)226 84 58</p>
+              <p>
+                <a href="mailto:arturojara1994@gmail.com">arturojara1994@gmail.com</a><br>
+                +52(646)226 84 58
+              </p>
             </div>
             <div class="col-md-3 text-center">
               <ul class="social-links">
-                <li> <a href="https://www.behance.net/arturojara" target="_blank" class="fa fa-behance"></a></li>
-                <li> <a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" class="fa fa-linkedin"></a></li>
-                <li> <a href="images/Arturo Jara English CV.pdf" target="_blank" class="fa fa-file-pdf-o"></a></li>
+                <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
               </ul>
             </div>
-            <div class="col-md-12 text-center">&copy; Arturo Jara. All rights reserved. 
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>&copy; Arturo Jara. All rights reserved.</p>
+            </div>
           </div>
         </div>
-        
       </footer>
+
+      <!-- Filter Container -->
       <div class="filter-container">
         <div class="container">
           <div class="inner">
             <ul class="filters">
-              <li> <a href="#" data-filter="item" class="active filter">All</a></li>
-              <li><a href="#" data-filter="design" class="filter">Ux Design</a></li>
+              <li><a href="#" data-filter="item" class="active filter">All</a></li>
+              <li><a href="#" data-filter="design" class="filter">UX Design</a></li>
               <li><a href="#" data-filter="typography" class="filter">Web Sites</a></li>
               <li><a href="#" data-filter="typography" class="filter">Mobile Apps</a></li>
               <li><a href="#" data-filter="typography" class="filter">Desktop</a></li>
@@ -143,6 +135,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Scripts -->
     <script src="js/assets/bootstrap.js"></script>
     <script src="js/assets/imagesloaded.pkgd.min.js"></script>
     <script src="js/assets/validation.js"></script>

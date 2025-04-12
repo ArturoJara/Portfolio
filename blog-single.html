@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Arturo Jara - Ux Design Portfolio</title>
+    <title>Arturo Jara - UX Design Portfolio | Blog Post</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="UX Design blog post by Arturo Jara - Insights about design philosophy">
+    <meta name="author" content="Arturo Jara">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../css/core.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <!-- inject:css-->
     <!-- endinject -->
+    
+    <!-- Scripts -->
     <script src="../js/assets/jquery.js"></script>
   </head>
   <body class="smooth-transition">
@@ -16,25 +22,22 @@
       <header>
         <div class="container">
           <div class="col-md-12 text-center">
-            <div class="nav-trigger">
+            <div class="nav-trigger" aria-label="Menu">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
             <ul class="navigation">
-              <li><a href="index.html"" class="active">Work</a>
-              </li>
-              <li> <a href="about.html">About</a>
-              </li>
-              <li> <a href="blog.html" class="active">Blog</a>
-              </li>
-              <li> <a href="contact.html">Contact</a>
-              </li>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html" class="active">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-
         </div>
       </header>
+
+      <!-- Hero Section -->
       <section class="hero">
         <div class="container">
           <div class="row">
@@ -44,16 +47,19 @@
           </div>
         </div>
       </section>
+
+      <!-- Blog Content Section -->
       <section class="content">
         <div class="container">
           <div class="row">
             <div class="col-md-9">
               <div class="row">
                 <div class="col-md-10">
-                  <p class="large">Philosophy is considered a science but it is difficult to say, when one has to compare with an ordinary science, for example biology, or chemistry. This is a question that turns into a burning problem among the scientists and linguists all over the world. </p><img src="../images/blog/single/01.jpg" class="mb-lg">
+                  <p class="large">Philosophy is considered a science but it is difficult to say, when one has to compare with an ordinary science, for example biology, or chemistry. This is a question that turns into a burning problem among the scientists and linguists all over the world.</p>
+                  <img src="../images/blog/single/01.jpg" alt="Philosophy illustration" class="mb-lg">
                   <p>Philosophy is considered a science but it is difficult to say, when one has to compare with an ordinary science, for example biology, or chemistry. This is a question that turns into a burning problem among the scientists and linguists all over the world. Can philosophy be a science? What does philosophy operate with? It operates with categories, which can be as wide and as interchangeable as one can only imagine. Ordinary science operates with definitions, which are quite limited in their field of research. Ordinary science uses terms and laws of that very science to continue the research, uniting with the others in very rare cases. Philosophy gets into the sense of every science trying to achieve results.</p>
                   <h3>Careful research</h3>
-                  <p>We also can not call philosophy a supra-science, for it also uses hypothesis and arguments to state the opinion. But there is the obvious thing: there are now laws in philosophy and never will be, for the science changes with the age, the needs, beliefs and requirements of the citizens. To prove your opinion, you can write the definition essay and state all the facts and arguments you know to prove one way or another. This is also a nice way to research the problem and see what the solution is. But you have to research it carefully; otherwise definition essays will not be fruitful. As all sciences philosophy has gone through its stages of development. Some scientists believe that the crib of philosophy was mythology and religion. If to see the principles of life and some primitive morals stated in some myths we may see that the statement is quite true and philosophy still continues to develop out of social beliefs and ideas. Philosophy is a science which is obligatory learned by every college student in order for him to establish his own philosophy of life. It is quite exciting to find answers to ever existing questions: who am I? What do I know? What can I know? What am I destined to do? Here is one more interesting observation. You can see that all famous philosophers were researching other science fields also. </p>
+                  <p>We also can not call philosophy a supra-science, for it also uses hypothesis and arguments to state the opinion. But there is the obvious thing: there are now laws in philosophy and never will be, for the science changes with the age, the needs, beliefs and requirements of the citizens. To prove your opinion, you can write the definition essay and state all the facts and arguments you know to prove one way or another. This is also a nice way to research the problem and see what the solution is. But you have to research it carefully; otherwise definition essays will not be fruitful. As all sciences philosophy has gone through its stages of development. Some scientists believe that the crib of philosophy was mythology and religion. If to see the principles of life and some primitive morals stated in some myths we may see that the statement is quite true and philosophy still continues to develop out of social beliefs and ideas. Philosophy is a science which is obligatory learned by every college student in order for him to establish his own philosophy of life. It is quite exciting to find answers to ever existing questions: who am I? What do I know? What can I know? What am I destined to do? Here is one more interesting observation. You can see that all famous philosophers were researching other science fields also.</p>
                   <p>For example, Freud, Yung, Kafka and others were doing research in linguistics and social sciences. Their numerous creations are the pride of human history for they revealed some secrets that remained undiscovered for a long time before their great contributions.</p>
                   <h4>Conclusion</h4>
                   <p>There are so many currents and branches, so many schools of philosophy that it is hard to decide, which one do you prefer and agree with. This much depends on the country, family, society you live in. This is one more difference between philosophy and other natural sciences. The law is stable for any country; gravity exists in India, same as in Brazil. Philosophy is a hard science, for it is very difficult to understand the sense of the dogma reading it only once. It is of course, not easy, but gives credit for you if you get interested and somewhere, being at the social event you quote one of the famous doctors of philosophy and make a great impression of an educated and intelligent personality.</p>
@@ -61,7 +67,11 @@
               </div>
               <div class="row">
                 <div class="col-md-4">
-                  <div class="pagination"><a href="#" class="disabled previous ion-ios-arrow-thin-left pull-left"></a><a href="#" class="btn btn-default active">Back</a><a href="#" class="next ion-ios-arrow-thin-right pull-right"> </a></div>
+                  <div class="pagination">
+                    <a href="#" class="disabled previous ion-ios-arrow-thin-left pull-left" aria-label="Previous post"></a>
+                    <a href="#" class="btn btn-default active">Back</a>
+                    <a href="#" class="next ion-ios-arrow-thin-right pull-right" aria-label="Next post"></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -69,10 +79,12 @@
               <aside>
                 <form class="mb-lg">
                   <div class="search input-group">
-                    <input type="text" placeholder="Search for..." class="form-control"><span class="input-group-btn">
-                      <button type="button" class="btn btn-default">
+                    <input type="text" placeholder="Search for..." class="form-control" aria-label="Search blog">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" aria-label="Search">
                         <div class="ion-ios-search-strong"></div>
-                      </button></span>
+                      </button>
+                    </span>
                   </div>
                 </form>
                 <p>Believing in smart ideas and branding experiences. Good design is as less design as possible.</p>
@@ -136,10 +148,16 @@
             <div class="col-md-6 mt-xl">
               <h3>Comments</h3>
               <div class="comments col-md-11">
-                <div class="comment"><a href="#reply"><span>Reply</span><span class="fa fa-reply"></span></a>
+                <div class="comment">
+                  <a href="#reply" aria-label="Reply to Shameen's comment">
+                    <span>Reply</span>
+                    <span class="fa fa-reply"></span>
+                  </a>
                   <div class="row">
                     <div class="col-md-2">
-                      <div class="thumb rounded"><img alt="Your Alternative text" src="../images/blog/single/avatar-01.png"></div>
+                      <div class="thumb rounded">
+                        <img alt="Shameen's avatar" src="../images/blog/single/avatar-01.png">
+                      </div>
                     </div>
                     <div class="content col-md-10">
                       <div class="details">
@@ -147,12 +165,18 @@
                         <div class="date">June 13 2016</div>
                       </div>
                       <div class="message">
-                        <p>Many people sign up for affiliate programs with the hopes of making some serious money. They advertise a few places and then wait for the money to start pouring in. When it doesn’t, they blame it on the program and quit.</p>
+                        <p>Many people sign up for affiliate programs with the hopes of making some serious money. They advertise a few places and then wait for the money to start pouring in. When it doesn't, they blame it on the program and quit.</p>
                       </div>
-                      <div class="comment"><a href="#reply"><span>Reply</span><span class="fa fa-reply"></span></a>
+                      <div class="comment">
+                        <a href="#reply" aria-label="Reply to Henry's comment">
+                          <span>Reply</span>
+                          <span class="fa fa-reply"></span>
+                        </a>
                         <div class="row">
                           <div class="col-md-2">
-                            <div class="thumb xs rounded"><img alt="Your Alternative text" src="../images/blog/single/avatar-02.png"></div>
+                            <div class="thumb xs rounded">
+                              <img alt="Henry's avatar" src="../images/blog/single/avatar-02.png">
+                            </div>
                           </div>
                           <div class="content col-md-10">
                             <div class="details">
@@ -160,7 +184,7 @@
                               <div class="date">June 13 2016</div>
                             </div>
                             <div class="message">
-                              <p>Many people sign up for affiliate programs with the hopes of making some serious money. They advertise a few places and then wait for the money to start pouring in. When it doesn’t, they blame it on the program and quit.</p>
+                              <p>Many people sign up for affiliate programs with the hopes of making some serious money. They advertise a few places and then wait for the money to start pouring in. When it doesn't, they blame it on the program and quit.</p>
                             </div>
                           </div>
                         </div>
@@ -168,10 +192,16 @@
                     </div>
                   </div>
                 </div>
-                <div class="comment"><a href="#reply"><span>Reply</span><span class="fa fa-reply"></span></a>
+                <div class="comment">
+                  <a href="#reply" aria-label="Reply to Jake's comment">
+                    <span>Reply</span>
+                    <span class="fa fa-reply"></span>
+                  </a>
                   <div class="row">
                     <div class="col-md-2">
-                      <div class="thumb rounded"><img alt="Your Alternative text" src="../images/blog/single/avatar-03.png"></div>
+                      <div class="thumb rounded">
+                        <img alt="Jake's avatar" src="../images/blog/single/avatar-03.png">
+                      </div>
                     </div>
                     <div class="content col-md-10">
                       <div class="details">
@@ -179,15 +209,21 @@
                         <div class="date">June 13 2016</div>
                       </div>
                       <div class="message">
-                        <p>Many people sign up for affiliate programs with the hopes of making some serious money. </p>
+                        <p>Many people sign up for affiliate programs with the hopes of making some serious money.</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="comment"><a href="#reply"><span>Reply</span><span class="fa fa-reply"></span></a>
+                <div class="comment">
+                  <a href="#reply" aria-label="Reply to Root's comment">
+                    <span>Reply</span>
+                    <span class="fa fa-reply"></span>
+                  </a>
                   <div class="row">
                     <div class="col-md-2">
-                      <div class="thumb rounded"><img alt="Your Alternative text" src="../images/blog/single/avatar-04.png"></div>
+                      <div class="thumb rounded">
+                        <img alt="Root's avatar" src="../images/blog/single/avatar-04.png">
+                      </div>
                     </div>
                     <div class="content col-md-10">
                       <div class="details">
@@ -195,7 +231,7 @@
                         <div class="date">June 13 2016</div>
                       </div>
                       <div class="message">
-                        <p>Many people sign up for affiliate programs with the hopes of making some serious money. </p>
+                        <p>Many people sign up for affiliate programs with the hopes of making some serious money.</p>
                       </div>
                     </div>
                   </div>
@@ -207,22 +243,25 @@
               <form class="form row mt-lg">
                 <div class="col-md-6">
                   <div class="tag">What's your name? *</div>
-                  <input required type="text" name="name" class="form-control">
+                  <input required type="text" name="name" class="form-control" aria-required="true">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">E-mail address *</div>
-                  <input required type="email" name="email" class="form-control">
+                  <input required type="email" name="email" class="form-control" aria-required="true">
                 </div>
                 <div class="col-md-12">
                   <div class="tag">Your comment *</div>
-                  <textarea required name="message" class="form-control"></textarea>
-                  <button id="send" type="submit" class="btn btn-default">Send message</button><span class="p-md">* These fields are required            </span>
+                  <textarea required name="message" class="form-control" aria-required="true"></textarea>
+                  <button id="send" type="submit" class="btn btn-default">Send message</button>
+                  <span class="p-md">* These fields are required</span>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Footer -->
       <footer class="bottom">
         <div class="container">
           <div class="row">
@@ -233,21 +272,29 @@
               <p>Mexico<br>Ensenada, Baja California 22785</p>
             </div>
             <div class="col-md-3 text-center">
-             <a href="mailto:arturojara1994@gmail.com"> <p >arturojara1994@gmail.com </a> <br>+52(646)226 84 58</p>
+              <p>
+                <a href="mailto:arturojara1994@gmail.com">arturojara1994@gmail.com</a><br>
+                +52(646)226 84 58
+              </p>
             </div>
             <div class="col-md-3 text-center">
               <ul class="social-links">
-                <li> <a href="https://www.behance.net/arturojara" target="_blank" class="fa fa-behance"></a></li>
-                <li> <a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" class="fa fa-linkedin"></a></li>
-                <li> <a href="images/Arturo Jara English CV.pdf" target="_blank" class="fa fa-file-pdf-o"></a></li>
+                <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
               </ul>
             </div>
-            <div class="col-md-12 text-center">&copy; Arturo Jara. All rights reserved. 
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>&copy; Arturo Jara. All rights reserved.</p>
+            </div>
           </div>
         </div>
-        
       </footer>
     </div>
+
+    <!-- Scripts -->
     <script src="../js/assets/bootstrap.js"></script>
     <script src="../js/assets/imagesloaded.pkgd.min.js"></script>
     <script src="../js/assets/validation.js"></script>

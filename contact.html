@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Arturo Jara - Ux Design Portfolio</title>
+    <title>Arturo Jara - UX Design Portfolio | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="Contact Arturo Jara - UX Designer based in Ensenada">
+    <meta name="author" content="Arturo Jara">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../css/core.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <!-- inject:css-->
     <!-- endinject -->
+    
+    <!-- Scripts -->
     <script src="../js/assets/jquery.js"></script>
   </head>
   <body class="smooth-transition">
@@ -16,30 +22,27 @@
       <header>
         <div class="container">
           <div class="col-md-12 text-center">
-            <div class="nav-trigger">
+            <div class="nav-trigger" aria-label="Menu">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
             <ul class="navigation">
-              <li><a href="index.html">Work</a>
-              </li>
-              <li> <a href="about.html">About</a>
-              </li>
-              <li> <a href="blog.html">Blog</a>
-              </li>
-              <li> <a href="contact.html" class="active">Contact</a>
-              </li>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
           </div>
-
         </div>
       </header>
+
+      <!-- Hero Section -->
       <section class="hero">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h1> <span class="typed">Hello</span></h1>
+              <h1><span class="typed">Hello</span></h1>
             </div>
           </div>
           <div class="row">
@@ -47,36 +50,48 @@
               <p>We love to get in touch with new people. Whether you are a potential customer, partner or someone else, we love to hear from you!</p>
             </div>
             <div class="col-md-6 col-md-offset-3">
-              <!-- The contact form-->
+              <!-- Contact Form -->
               <form id="form" action="/php/mail.php" class="form row">
                 <div class="col-md-6">
                   <div class="tag">What's your name? *</div>
-                  <input required type="text" name="name" class="form-control">
+                  <input required type="text" name="name" class="form-control" aria-required="true">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">Phone number</div>
-                  <input type="text" name="phone" class="form-control">
+                  <input type="tel" name="phone" class="form-control">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">E-mail address *</div>
-                  <input required type="email" name="email" class="form-control">
+                  <input required type="email" name="email" class="form-control" aria-required="true">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">Website URL</div>
-                  <input type="text" name="website" class="form-control">
+                  <input type="url" name="website" class="form-control">
                 </div>
                 <div class="col-md-12">
                   <div class="tag">Tell us what's up! *</div>
-                  <textarea required name="message" class="form-control"></textarea>
-                  <button id="send" type="submit" class="btn btn-default">Send message</button><span class="p-md">* These fields are required</span>
+                  <textarea required name="message" class="form-control" aria-required="true"></textarea>
+                  <button id="send" type="submit" class="btn btn-default">Send message</button>
+                  <span class="p-md">* These fields are required</span>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </section>
-      <!-- The type animation script-->
-      <script>$(function(){$(".typed").typed({strings: ["Hello", "Hola", "こんにちは", "Ciao", "Aloha", "Hallo"],typeSpeed: 130,loop: true  });});</script>
+
+      <!-- Type Animation Script -->
+      <script>
+        $(function(){
+          $(".typed").typed({
+            strings: ["Hello", "Hola", "こんにちは", "Ciao", "Aloha", "Hallo"],
+            typeSpeed: 130,
+            loop: true
+          });
+        });
+      </script>
+
+      <!-- Footer -->
       <footer class="bottom">
         <div class="container">
           <div class="row">
@@ -87,21 +102,29 @@
               <p>Mexico<br>Ensenada, Baja California 22785</p>
             </div>
             <div class="col-md-3 text-center">
-             <a href="mailto:arturojara1994@gmail.com"> <p >arturojara1994@gmail.com </a> <br>+52(646)226 84 58</p>
+              <p>
+                <a href="mailto:arturojara1994@gmail.com">arturojara1994@gmail.com</a><br>
+                +52(646)226 84 58
+              </p>
             </div>
             <div class="col-md-3 text-center">
               <ul class="social-links">
-                <li> <a href="https://www.behance.net/arturojara" target="_blank" class="fa fa-behance"></a></li>
-                <li> <a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" class="fa fa-linkedin"></a></li>
-                <li> <a href="images/Arturo Jara English CV.pdf" target="_blank" class="fa fa-file-pdf-o"></a></li>
+                <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
               </ul>
             </div>
-            <div class="col-md-12 text-center">&copy; Arturo Jara. All rights reserved. 
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>&copy; Arturo Jara. All rights reserved.</p>
+            </div>
           </div>
         </div>
-        
       </footer>
     </div>
+
+    <!-- Scripts -->
     <script src="../js/assets/bootstrap.js"></script>
     <script src="../js/assets/imagesloaded.pkgd.min.js"></script>
     <script src="../js/assets/validation.js"></script>
