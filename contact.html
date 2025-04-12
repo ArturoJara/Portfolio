@@ -51,26 +51,26 @@
             </div>
             <div class="col-md-6 col-md-offset-3">
               <h3>Let's make <span class="italic">work</span> together</h3>
-              <form id="contact-form" action="/php/mail.php" class="form row mt-lg">
+              <form id="contact-form" class="form row mt-lg">
                 <div class="col-md-6">
                   <div class="tag">What's your name? *</div>
-                  <input required type="text" name="name" class="form-control" aria-required="true">
+                  <input required type="text" name="name" class="form-control" aria-required="true" placeholder="Your name">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">Phone number</div>
-                  <input type="tel" name="phone" class="form-control">
+                  <input type="tel" name="phone" class="form-control" placeholder="Your phone number">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">E-mail address *</div>
-                  <input required type="email" name="email" class="form-control" aria-required="true">
+                  <input required type="email" name="email" class="form-control" aria-required="true" placeholder="your@email.com">
                 </div>
                 <div class="col-md-6">
                   <div class="tag">Website URL</div>
-                  <input type="url" name="website" class="form-control">
+                  <input type="url" name="website" class="form-control" placeholder="https://yourwebsite.com">
                 </div>
                 <div class="col-md-12">
                   <div class="tag">Tell us what's up! *</div>
-                  <textarea required name="message" class="form-control" aria-required="true"></textarea>
+                  <textarea required name="message" class="form-control" aria-required="true" placeholder="Your message here..." rows="5"></textarea>
                   <button id="send" type="submit" class="btn btn-default">Send message</button>
                   <span class="p-md">* These fields are required</span>
                   <div id="form-status" class="mt-md"></div>
