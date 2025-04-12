@@ -50,8 +50,8 @@
               <p>We love to get in touch with new people. Whether you are a potential customer, partner or someone else, we love to hear from you!</p>
             </div>
             <div class="col-md-6 col-md-offset-3">
-              <!-- Contact Form -->
-              <form id="form" action="/php/mail.php" class="form row">
+              <h3>Let's make <span class="italic">work</span> together</h3>
+              <form id="contact-form" action="/php/mail.php" class="form row mt-lg">
                 <div class="col-md-6">
                   <div class="tag">What's your name? *</div>
                   <input required type="text" name="name" class="form-control" aria-required="true">
@@ -73,6 +73,7 @@
                   <textarea required name="message" class="form-control" aria-required="true"></textarea>
                   <button id="send" type="submit" class="btn btn-default">Send message</button>
                   <span class="p-md">* These fields are required</span>
+                  <div id="form-status" class="mt-md"></div>
                 </div>
               </form>
             </div>
@@ -135,5 +136,44 @@
     <script src="../modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="../js/assets/animsition.js"></script>
     <script src="../js/functions.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Contact form submission
+        $('#contact-form').on('submit', function(e) {
+          e.preventDefault();
+          
+          // Disable submit button and show loading state
+          $('#send').prop('disabled', true).text('Sending...');
+          $('#form-status').html('<div class="alert alert-info">Sending your message...</div>');
+          
+          // Get form data
+          var formData = $(this).serialize();
+          
+          // Send AJAX request
+          $.ajax({
+            type: 'POST',
+            url: '/php/mail.php',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+              if (response.status === 'success') {
+                $('#form-status').html('<div class="alert alert-success">' + response.message + '</div>');
+                // Reset form
+                $('#contact-form')[0].reset();
+              } else {
+                $('#form-status').html('<div class="alert alert-danger">' + response.message + '</div>');
+              }
+            },
+            error: function() {
+              $('#form-status').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
+            },
+            complete: function() {
+              // Re-enable submit button
+              $('#send').prop('disabled', false).text('Send message');
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
