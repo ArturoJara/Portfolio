@@ -171,39 +171,78 @@
   });
 
   // Contact form submission
-  $('#contact-form, #form').on('submit', function(e) {
+  $('#contact-form').on('submit', function(e) {
     e.preventDefault();
     
+    // Basic form validation
+    var $form = $(this);
+    var $name = $form.find('input[name="name"]');
+    var $email = $form.find('input[name="email"]');
+    var $message = $form.find('textarea[name="message"]');
+    var $status = $('#form-status');
+    
+    // Reset previous error states
+    $('.form-control').removeClass('error');
+    $status.empty();
+    
+    // Validate required fields
+    var isValid = true;
+    if (!$name.val().trim()) {
+      $name.addClass('error');
+      isValid = false;
+    }
+    if (!$email.val().trim() || !isValidEmail($email.val())) {
+      $email.addClass('error');
+      isValid = false;
+    }
+    if (!$message.val().trim()) {
+      $message.addClass('error');
+      isValid = false;
+    }
+    
+    if (!isValid) {
+      $status.html('<div class="alert alert-danger">Please fill in all required fields correctly.</div>');
+      return;
+    }
+    
     // Disable submit button and show loading state
-    $('#send').prop('disabled', true).text('Sending...');
-    $('#form-status').html('<div class="alert alert-info">Sending your message...</div>');
+    var $submitBtn = $('#send');
+    $submitBtn.prop('disabled', true).text('Sending...');
+    $status.html('<div class="alert alert-info">Sending your message...</div>');
     
     // Get form data
-    var formData = $(this).serialize();
+    var formData = $form.serialize();
     
     // Send AJAX request
     $.ajax({
       type: 'POST',
-      url: '/php/mail.php',
+      url: 'php/mail.php',
       data: formData,
       dataType: 'json',
       success: function(response) {
         if (response.status === 'success') {
-          $('#form-status').html('<div class="alert alert-success">' + response.message + '</div>');
+          $status.html('<div class="alert alert-success">' + response.message + '</div>');
           // Reset form
-          $('#contact-form, #form')[0].reset();
+          $form[0].reset();
         } else {
-          $('#form-status').html('<div class="alert alert-danger">' + response.message + '</div>');
+          $status.html('<div class="alert alert-danger">' + (response.message || 'An error occurred. Please try again.') + '</div>');
         }
       },
-      error: function() {
-        $('#form-status').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
+      error: function(xhr, status, error) {
+        console.error('Form submission error:', error);
+        $status.html('<div class="alert alert-danger">An error occurred while sending your message. Please try again later.</div>');
       },
       complete: function() {
         // Re-enable submit button
-        $('#send').prop('disabled', false).text('Send message');
+        $submitBtn.prop('disabled', false).text('Send message');
       }
     });
   });
+
+  // Email validation helper function
+  function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 
 })(jQuery);
