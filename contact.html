@@ -136,44 +136,5 @@
     <script src="../modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="../js/assets/animsition.js"></script>
     <script src="../js/functions.js"></script>
-    <script>
-      $(document).ready(function() {
-        // Contact form submission
-        $('#contact-form').on('submit', function(e) {
-          e.preventDefault();
-          
-          // Disable submit button and show loading state
-          $('#send').prop('disabled', true).text('Sending...');
-          $('#form-status').html('<div class="alert alert-info">Sending your message...</div>');
-          
-          // Get form data
-          var formData = $(this).serialize();
-          
-          // Send AJAX request
-          $.ajax({
-            type: 'POST',
-            url: '/php/mail.php',
-            data: formData,
-            dataType: 'json',
-            success: function(response) {
-              if (response.status === 'success') {
-                $('#form-status').html('<div class="alert alert-success">' + response.message + '</div>');
-                // Reset form
-                $('#contact-form')[0].reset();
-              } else {
-                $('#form-status').html('<div class="alert alert-danger">' + response.message + '</div>');
-              }
-            },
-            error: function() {
-              $('#form-status').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
-            },
-            complete: function() {
-              // Re-enable submit button
-              $('#send').prop('disabled', false).text('Send message');
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
