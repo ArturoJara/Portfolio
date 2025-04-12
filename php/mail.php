@@ -1,63 +1,90 @@
 <?php
-// Configuration
-$subject = 'Contact Form Submission - Arturo Jara Portfolio'; // Subject of your email
-$to = 'arturojara1994@gmail.com'; // Your e-mail address
+header('Content-Type: application/json');
 
-// Set headers for HTML email
-$headers = 'MIME-Version: 1.0' . "\r\n" .
-           'Content-type: text/html; charset=UTF-8' . "\r\n" .
-           'From: ' . $_POST['name'] . ' <' . $_POST['email'] . '>' . "\r\n" .
-           'Reply-To: ' . $_POST['email'] . "\r\n" .
-           'X-Mailer: PHP/' . phpversion();
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Sanitize input data
-$name = htmlspecialchars($_POST['name']);
-$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-$phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : 'Not provided';
-$website = isset($_POST['website']) ? htmlspecialchars($_POST['website']) : 'Not provided';
-$message = htmlspecialchars($_POST['message']);
+// Log file path
+$logFile = 'mail_log.txt';
 
-// Build email message
-$emailMessage = '
-<html>
-<head>
-  <title>New Contact Form Submission</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background-color: #f8f8f8; padding: 15px; border-radius: 5px; }
-    .content { padding: 20px 0; }
-    .footer { font-size: 12px; color: #777; margin-top: 20px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h2>New Contact Form Submission</h2>
-    </div>
-    <div class="content">
-      <p><strong>Name:</strong> ' . $name . '</p>
-      <p><strong>Email:</strong> ' . $email . '</p>
-      <p><strong>Phone:</strong> ' . $phone . '</p>
-      <p><strong>Website:</strong> ' . $website . '</p>
-      <p><strong>Message:</strong></p>
-      <p>' . nl2br($message) . '</p>
-    </div>
-    <div class="footer">
-      <p>This email was sent from the contact form on your portfolio website.</p>
-    </div>
-  </div>
-</body>
-</html>';
+// Function to log errors
+function logError($message) {
+    global $logFile;
+    $timestamp = date('Y-m-d H:i:s');
+    $logMessage = "[$timestamp] $message\n";
+    file_put_contents($logFile, $logMessage, FILE_APPEND);
+}
 
-// Send email
-if (mail($to, $subject, $emailMessage, $headers)) {
-  // Return success response
-  header('Content-Type: application/json');
-  echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully!']);
-} else {
-  // Return error response
-  header('Content-Type: application/json');
-  echo json_encode(['status' => 'error', 'message' => 'Sorry, there was an error sending your message. Please try again later.']);
+try {
+    // Validate required fields
+    $requiredFields = ['name', 'email', 'message'];
+    foreach ($requiredFields as $field) {
+        if (empty($_POST[$field])) {
+            throw new Exception("Missing required field: $field");
+        }
+    }
+
+    // Sanitize input data
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+    $phone = isset($_POST['phone']) ? filter_var($_POST['phone'], FILTER_SANITIZE_STRING) : '';
+    $website = isset($_POST['website']) ? filter_var($_POST['website'], FILTER_SANITIZE_URL) : '';
+
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        throw new Exception('Invalid email format');
+    }
+
+    // Email settings
+    $to = 'arturojara1994@gmail.com';
+    $subject = 'Contact Form Submission - Arturo Jara Portfolio';
+    
+    // Create email headers
+    $headers = array(
+        'From: ' . $name . ' <' . $email . '>',
+        'Reply-To: ' . $email,
+        'X-Mailer: PHP/' . phpversion(),
+        'Content-Type: text/html; charset=UTF-8'
+    );
+
+    // Create email message
+    $emailMessage = "
+    <html>
+    <head>
+        <title>New Contact Form Submission</title>
+    </head>
+    <body>
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> {$name}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        " . ($phone ? "<p><strong>Phone:</strong> {$phone}</p>" : "") . "
+        " . ($website ? "<p><strong>Website:</strong> {$website}</p>" : "") . "
+        <p><strong>Message:</strong></p>
+        <p>" . nl2br(htmlspecialchars($message)) . "</p>
+    </body>
+    </html>";
+
+    // Send email
+    if (!mail($to, $subject, $emailMessage, implode("\r\n", $headers))) {
+        throw new Exception('Failed to send email');
+    }
+
+    // Return success response
+    echo json_encode([
+        'status' => 'success',
+        'message' => 'Thank you for your message. We will get back to you soon!'
+    ]);
+
+} catch (Exception $e) {
+    // Log the error
+    logError($e->getMessage());
+    
+    // Return error response
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'An error occurred while sending your message. Please try again later.'
+    ]);
 }
 ?>
