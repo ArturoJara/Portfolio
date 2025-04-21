@@ -1789,4 +1789,27 @@ ul.tag-list li {
   }
 }
 
+.green-bg {
+  background-color: #4CAF50;
+  color: white;
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.green-bg h2,
+.green-bg p {
+  color: white;
+  margin: 0;
+}
+
+.green-bg h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.green-bg p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
 
