@@ -15,27 +15,44 @@
     <!-- Scripts -->
     <script src="../js/assets/jquery.js"></script>
   </head>
-  <body class="smooth-transition">
+  <body>
     <div class="container-fluid">
       <!-- Header -->
-      <header>
+      <header class="sticky-header">
         <div class="container">
-          <div class="col-md-12 text-center">
-            <div class="nav-trigger" aria-label="Menu">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
+          <div class="col-md-12">
+            <div class="header-content">
+              <div class="nav-left">
+                <ul class="navigation">
+                  <li><a href="index.html" class="active">Work</a></li>
+                  <li><a href="pages/about.html">About</a></li>
+                </ul>
+              </div>
+              <div class="nav-right">
+                <ul class="social-links">
+                  <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                  <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                  <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
+                  <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li>
+                </ul>
+              </div>
             </div>
-            <ul class="navigation">
-              <li><a href="index.html" class="active">Work</a></li>
-              <li><a href="pages/about.html">About</a></li>
-            </ul>
           </div>
         </div>
       </header>
 
+      <!-- Floating Navigation -->
+      <nav class="floating-nav">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#research">Research Phase</a></li>
+          <li><a href="#define">Define Phase</a></li>
+          <li><a href="#ideation">Ideation Phase</a></li>
+        </ul>
+      </nav>
+
       <!-- Hero Section -->
-      <section class="hero text-center">
+      <section class="hero text-center" id="overview">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -67,7 +84,7 @@
       </section>
 
       <!-- The Problem Section -->
-      <section class="content">
+      <section class="content" id="problem">
         <div class="container">
           <div class="row mb-xl">
             <div class="col-md-12">
@@ -100,65 +117,87 @@
       </section>
 
       <!-- Research Phase Section -->
-      <section class="content">
+      <section class="content" id="research">
         <div class="container">
           <div class="row">
             <div class="col-md-12 gray-bg mb-xl vcenter">
               <div class="col-md-12 col-sm-12 text-center p-lg">
                 <h2>Research Phase</h2>
-                <p>Time: 6 Months</p>
+                <p>Time: 2 weeks</p>
               </div>
             </div>
           </div>
 
-          <!-- UX Research Roadmap -->
-          <div class="row mb-xl" id="roadmap">
+          <!-- Research Goals Section -->
+          <div class="row mb-xl">
             <div class="col-md-12">
-
-              <div class="roadmap-container">
-                <div class="roadmap-timeline">
-                  <!-- Phase 1 -->
-                  <div class="roadmap-item">
-                    <div class="roadmap-date">Phase 1</div>
-                    <div class="roadmap-content">
-                      <h4>Discovery & Planning</h4>
-                      <p>Stakeholder interviews, project scope definition</p>
+              <div class="box pt-0">
+                <p>RESEARCH GOALS</p>
+                <h3>Setting Clear Objectives for Our Research</h3>
+                <p>Before diving into the research phase, we established key objectives to guide our investigation and ensure we gathered meaningful insights about B2C payment processes.</p>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="opportunities-card box pt-0">
+                <div class="section-header">
+                  <h3>Primary Research Goals</h3>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="opportunity-item" style="background-color: #E3F2FD; border-left: 4px solid #2196F3; padding: 24px; margin-bottom: 20px; min-height: 180px;">
+                      <h4>Payment Process Efficiency</h4>
+                      <p>Understand current payment processing times, identify bottlenecks in check-based payments, and measure administrative costs of physical check processing</p>
                     </div>
                   </div>
-                  
-                  <!-- Phase 2 -->
-                  <div class="roadmap-item">
-                    <div class="roadmap-date">Phase 2</div>
-                    <div class="roadmap-content">
-                      <h4>User Interviews</h4>
-                      <p>User interviews, contextual inquiry, surveys</p>
+                  <div class="col-md-6">
+                    <div class="opportunity-item" style="background-color: #FFF3E0; border-left: 4px solid #FF9800; padding: 24px; margin-bottom: 20px; min-height: 180px;">
+                      <h4>User Pain Points</h4>
+                      <p>Document challenges faced by payors and payees, analyze fraud risks in current payment methods, and evaluate user experience with existing payment systems</p>
                     </div>
                   </div>
-                  
-                  <!-- Phase 3 -->
-                  <div class="roadmap-item">
-                    <div class="roadmap-date">Phase 3</div>
-                    <div class="roadmap-content">
-                      <h4>Competitive Analysis</h4>
-                      <p>Market research, competitor analysis, SWOT</p>
+                  <div class="col-md-6">
+                    <div class="opportunity-item" style="background-color: #F3E5F5; border-left: 4px solid #9C27B0; padding: 24px; margin-bottom: 20px; min-height: 180px;">
+                      <h4>Market Requirements</h4>
+                      <p>Assess digital payment adoption readiness, identify integration requirements with existing systems, and understand security and compliance needs</p>
                     </div>
                   </div>
-                  
-                  <!-- Phase 4 -->
-                  <div class="roadmap-item">
-                    <div class="roadmap-date">Phase 4</div>
-                    <div class="roadmap-content">
-                      <h4>User Personas</h4>
-                      <p>Persona development, journey mapping</p>
+                  <div class="col-md-6">
+                    <div class="opportunity-item" style="background-color: #E8F5E9; border-left: 4px solid #4CAF50; padding: 24px; margin-bottom: 20px; min-height: 180px;">
+                      <h4>Success Metrics</h4>
+                      <p>Define key performance indicators, establish baseline metrics for current processes, and determine target improvement goals</p>
                     </div>
                   </div>
-                  
-                  <!-- Phase 5 -->
-                  <div class="roadmap-item">
-                    <div class="roadmap-date">Phase 5</div>
-                    <div class="roadmap-content">
-                      <h4>Information Architecture</h4>
-                      <p>Site mapping, user flows, content strategy</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="opportunities-card box pt-0">
+                <div class="section-header">
+                  <h3>Research Focus Areas</h3>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Administrative Efficiency</h4>
+                      <p>High administrative costs associated with physical check processing</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Payment Processing</h4>
+                      <p>Delays and inefficiencies in payment disbursement</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Security & Risk</h4>
+                      <p>Security concerns and fraud risks in current payment methods</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>User Experience</h4>
+                      <p>User experience gaps in existing payment solutions</p>
                     </div>
                   </div>
                 </div>
@@ -168,9 +207,8 @@
         </div>
       </section>
 
-      
       <!-- User Personas Section -->
-      <section class="content" id="Discovery">
+      <section class="content" id="user-persona">
         <div class="container">
           <div class="row mb-xl">
             <div class="col-md-6">
@@ -188,55 +226,8 @@
       </section>
 
             
-      <!-- User Research Section -->
-      <section class="content" id="User Interviews">
-        <div class="container">
-          <div class="row mb-xl">
-            <div class="col-md-12">
-              <div class="box pt-0">
-                <p>Uncovering the Pain Points: Insights from User Interviews</p>
-                <h3>Direct feedback from users revealed key challenges in B2C payments, validating the need for VerityPay's streamlined solution.</h3>
-                <p>Through in-depth user interviews with businesses and consumers involved in B2C transactions, we gained valuable insight into the challenges faced in managing and receiving payments. These conversations revealed frustration with outdated systems, lack of transparency, and inefficient communication—echoing findings from our competitor analysis. This feedback confirmed a clear opportunity for VerityPay to innovate and streamline the B2C payment experience.</p>
-              </div>
-            </div>
-                <div class="col-md-12">
-              <div class="opportunities-card box pt-0">
-            
-                  <div class="col-md-6">
-                    <div class="opportunity-item">
-                      <h4>Payment Delays Impact Business</h4>
-                      <p>"We lose 2-3 days of productivity waiting for checks to clear. Our cash flow suffers significantly."</p>
-                      <span class="interviewee">- Small Business Owner</span>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="opportunity-item">
-                      <h4>Mobile Access is Essential</h4>
-                      <p>"I need to check payment status on my phone while traveling. Current systems are impossible to use on mobile."</p>
-                      <span class="interviewee">- Freelance Consultant</span>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="opportunity-item">
-                      <h4>Security is a Major Concern</h4>
-                      <p>"We've had two instances of check fraud in the past year. Digital payments would give us better control and security."</p>
-                      <span class="interviewee">- Financial Controller</span>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="opportunity-item">
-                      <h4>Communication is Inefficient</h4>
-                      <p>"We spend hours on the phone tracking down payment status. There's no automated way to get updates."</p>
-                      <span class="interviewee">- Accounts Payable Manager</span>
-                    </div>
-                  </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Research Section 2: Competitive Analysis -->
-      <section class="content research-section-2">
+      <section class="content research-section-2" id="information-architecture">
         <div class="container">
           <div class="row box pt-0">
             <div class="col-md-12">
@@ -350,112 +341,114 @@
           </div>
         </div>
       </section>
-        
-            <!-- User Persona Section -->
-            <section class="content" id="User Persona">
-              <div class="container">
-                <div class="row mb-xl">
-                  <div class="col-md-12">
-                    <div class="box pt-0">
-                      <p>Understanding Our Users: Key Personas</p>
-                      <h3>Creating detailed user personas to guide our design decisions and ensure we meet the needs of both payors and payees.</h3>
-                      <p>Through extensive research and interviews, we identified two primary user personas that represent our target audience. These personas helped us focus our design efforts on solving real user problems in the B2C payment space.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="opportunities-card box pt-0">
-                      <div class="section-header">
-                        <h3>User Personas</h3>
-                      </div>
-                      
-                      <!-- Tabs Navigation -->
-                      <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
-                          <a href="#payor" aria-controls="payor" role="tab" data-toggle="tab">Persona 1</a>
-                        </li>
-                        <li role="presentation">
-                          <a href="#payee" aria-controls="payee" role="tab" data-toggle="tab">Persona 2</a>
-                        </li>
-                      </ul>
-                      
-                      <!-- Tab Content -->
-                      <div class="tab-content">
-                        <!-- Payor Tab -->
-                        <div role="tabpanel" class="tab-pane active" id="payor">
-                          <div class="row">
-                            <div class="col-md-12 text-center">
-                              <img src="images/portfolio/User Personas Research02.jpg" alt="Payor Persona">
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <!-- Payee Tab -->
-                        <div role="tabpanel" class="tab-pane" id="payee">
-                          <div class="row">
-                            <div class="col-md-12 text-center">
-                              <img src="images/portfolio/User Personas Research04.jpg" alt="Payee Persona">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
 
-            
-      <!-- Information Architecture Section -->
-      <section class="content" id="Information Architecture">
+      <!-- User Research Section -->
+      <section class="content" id="user-interviews">
         <div class="container">
           <div class="row mb-xl">
             <div class="col-md-12">
               <div class="box pt-0">
-                <p>Structuring the User Experience: Information Architecture</p>
-                <h3>Organizing content and features to create an intuitive and efficient user journey.</h3>
-                <p>Our information architecture approach focused on creating a clear hierarchy and navigation structure that would make it easy for both payors and payees to find what they need quickly and efficiently.</p>
+                <p>Uncovering the Pain Points: Insights from User Interviews</p>
+                <h3>Direct feedback from users revealed key challenges in B2C payments, validating the need for VerityPay's streamlined solution.</h3>
+                <p>Through in-depth user interviews with businesses and consumers involved in B2C transactions, we gained valuable insight into the challenges faced in managing and receiving payments. These conversations revealed frustration with outdated systems, lack of transparency, and inefficient communication—echoing findings from our competitor analysis. This feedback confirmed a clear opportunity for VerityPay to innovate and streamline the B2C payment experience.</p>
               </div>
             </div>
-          </div>
-          
-          <div class="row">
-            <div class="col-md-12">
+                <div class="col-md-12">
               <div class="opportunities-card box pt-0">
-                <div class="section-header">
-                  <h3>Site Map</h3>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <img src="images/portfolio/Information Architecture.jpg" alt="VerityPay Site Map" class="fadein">
+            
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Payment Delays Impact Business</h4>
+                      <p>"We lose 2-3 days of productivity waiting for checks to clear. Our cash flow suffers significantly."</p>
+                      <span class="interviewee">- Small Business Owner</span>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Mobile Access is Essential</h4>
+                      <p>"I need to check payment status on my phone while traveling. Current systems are impossible to use on mobile."</p>
+                      <span class="interviewee">- Freelance Consultant</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Security is a Major Concern</h4>
+                      <p>"We've had two instances of check fraud in the past year. Digital payments would give us better control and security."</p>
+                      <span class="interviewee">- Financial Controller</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="opportunity-item">
+                      <h4>Communication is Inefficient</h4>
+                      <p>"We spend hours on the phone tracking down payment status. There's no automated way to get updates."</p>
+                      <span class="interviewee">- Accounts Payable Manager</span>
+                    </div>
+                  </div>
+                  </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="row mt-12">
+            
+      <!-- User Persona Section -->
+      <section class="content" id="user-persona">
+        <div class="container">
+          <div class="row mb-xl">
+            <div class="col-md-12">
+              <div class="box pt-0">
+                <p>Understanding Our Users: Key Personas</p>
+                <h3>Creating detailed user personas to guide our design decisions and ensure we meet the needs of both payors and payees.</h3>
+                <p>Through extensive research and interviews, we identified two primary user personas that represent our target audience. These personas helped us focus our design efforts on solving real user problems in the B2C payment space.</p>
+              </div>
+            </div>
             <div class="col-md-12">
               <div class="opportunities-card box pt-0">
                 <div class="section-header">
-                  <h3>User Flows</h3>
+                  <h3>User Personas</h3>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="opportunity-item">
-                      <h4>Payor Flow</h4>
-                      <img src="images/portfolio/Payor Flow.jpg" alt="Payor User Flow" class="fadein">
+                
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#payor" aria-controls="payor" role="tab" data-toggle="tab">Persona 1</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#payee" aria-controls="payee" role="tab" data-toggle="tab">Persona 2</a>
+                  </li>
+                </ul>
+                
+                <!-- Tab Content -->
+                <div class="tab-content">
+                  <!-- Payor Tab -->
+                  <div role="tabpanel" class="tab-pane active" id="payor">
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <img src="images/portfolio/User Personas Research02.jpg" alt="Payor Persona">
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="opportunity-item">
-                      <h4>Payee Flow</h4>
-                      <img src="images/portfolio/Payee Flow.jpg" alt="Payee User Flow" class="fadein">
+                  
+                  <!-- Payee Tab -->
+                  <div role="tabpanel" class="tab-pane" id="payee">
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <img src="images/portfolio/User Personas Research04.jpg" alt="Payee Persona">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+            
+      <!-- Information Customer journey Section -->
+      <section class="content" id="customer-journey">
+        <div class="container">
+
 
           <div class="row mt-12">
             <div class="col-md-12">
@@ -472,6 +465,93 @@
                   </div>
                   <div class="col-md-12 text-center">
                     <img src="images/portfolio/Customer Journey.png" alt="Customer Journey Map" class="fadein">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <!-- Define Phase Section -->
+      <section class="content" id="define">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 gray-bg mb-xl vcenter">
+              <div class="col-md-12 col-sm-12 text-center p-lg">
+                <h2>Define Phase</h2>
+                <p>Time: 1 Week</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Define Phase Content -->
+          <div class="row mb-xl">
+            <div class="col-md-12">
+              <div class="box pt-0">
+                <h3>Defining the Problem Space</h3>
+                <p>After gathering insights from our research, we analyzed the data to define clear problem statements and user needs. This phase helped us focus our design efforts on solving the right problems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ideation Phase Section -->
+      <section class="content" id="ideation">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 gray-bg mb-xl vcenter">
+              <div class="col-md-12 col-sm-12 text-center p-lg">
+                <h2>Ideation Phase</h2>
+                <p>Time: 1 Week</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- UX Research Roadmap -->
+          <div class="row mb-xl" id="roadmap">
+            <div class="col-md-12">
+              <div class="roadmap-container">
+                <div class="roadmap-timeline">
+                  <!-- Phase 1 -->
+                  <div class="roadmap-item">
+                    <div class="roadmap-content">
+                      <h4>Brainstorming</h4>
+                      <p>Crazy 8 sessions, feature prioritization</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Phase 2 -->
+                  <div class="roadmap-item">
+                    <div class="roadmap-content">
+                      <h4>Wireframing</h4>
+                      <p>Low-fidelity prototypes, user flows</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Phase 3 -->
+                  <div class="roadmap-item">
+                    <div class="roadmap-content">
+                      <h4>Prototyping</h4>
+                      <p>High-fidelity mockups, interactive prototypes</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Phase 4 -->
+                  <div class="roadmap-item">
+                    <div class="roadmap-content">
+                      <h4>User Testing</h4>
+                      <p>Usability testing, feedback collection</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Phase 5 -->
+                  <div class="roadmap-item">
+                    <div class="roadmap-content">
+                      <h4>Iteration</h4>
+                      <p>Design refinement, final adjustments</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -512,22 +592,22 @@
                 <div class="row mt-12">
                   <div class="col-md-3">
                     <div class="opportunity-item">
-                      <img src="images/portfolio/brainstorming1.jpg" alt="Brainstorming Sketch 1" class="fadein">
+                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Team Brainstorming" class="fadein">
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="opportunity-item">
-                      <img src="images/portfolio/brainstorming2.jpg" alt="Brainstorming Sketch 2" class="fadein">
+                      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Person Sketching" class="fadein">
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="opportunity-item">
-                      <img src="images/portfolio/brainstorming3.jpg" alt="Brainstorming Sketch 3" class="fadein">
+                      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Whiteboard Notes" class="fadein">
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="opportunity-item">
-                      <img src="images/portfolio/brainstorming4.jpg" alt="Brainstorming Sketch 4" class="fadein">
+                      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Collaborative Workspace" class="fadein">
                     </div>
                   </div>
                 </div>
@@ -537,19 +617,7 @@
         </div>
       </section>
 
-      <!-- The Opportunity Section -->
-      <section class="content">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 green-bg mb-xl vcenter">
-              <div class="col-md-12 col-sm-12 text-center p-lg">
-                <h2>The Opportunity</h2>
-                <p>How might we create a complementary workflow that supports both payors and payees to organize, track, search, and update payment submissions? VerityPay modernizes B2C payments by replacing paper checks with instant digital solutions, reducing delays and fraud while improving the experience for all stakeholders.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <!-- Footer -->
       <footer class="bottom">
@@ -597,5 +665,54 @@
     <script src="../modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="../js/assets/animsition.js"></script>
     <script src="../js/functions.js"></script>
+    
+    <!-- Floating Navigation Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.floating-nav a');
+        const sections = document.querySelectorAll('section[id]');
+        
+        function setActiveLink() {
+          let currentSection = '';
+          const scrollPosition = window.scrollY + 100; // Offset for better detection
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const sectionBottom = sectionTop + sectionHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+          
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === currentSection) {
+              link.classList.add('active');
+            }
+          });
+        }
+        
+        // Smooth scrolling for navigation links
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+              window.scrollTo({
+                top: targetSection.offsetTop - 60,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+        
+        window.addEventListener('scroll', setActiveLink);
+        setActiveLink(); // Set initial active state
+      });
+    </script>
   </body>
 </html>

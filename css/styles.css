@@ -127,6 +127,10 @@ ul.navigation {
   font-weight: 300;
   position: relative;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 ul.navigation li {
@@ -145,11 +149,31 @@ ul.navigation li a {
   font-size: 14px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  text-decoration: none;
 }
 
-ul.navigation li a:hover, ul.navigation li a.active {
+ul.navigation li a:hover, 
+ul.navigation li a.active {
   color: #727272;
   text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+  ul.navigation {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  ul.navigation li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  ul.navigation li a {
+    padding: 10px 0;
+    margin: 0;
+  }
 }
 
 ul.navigation li ul.dropdown {
@@ -193,92 +217,6 @@ ul.navigation li:hover ul.dropdown {
   transition: opacity .7s, -webkit-transform .3s;
   transition: opacity .7s, transform .3s;
   transition: opacity .7s, transform .3s, -webkit-transform .3s;
-}
-
-@media screen and (max-width: 992px) {
-  ul.navigation {
-    margin-top: 0;
-    padding: 0;
-    position: relative;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  ul.navigation li {
-    max-height: 0;
-    overflow: hidden;
-    display: block;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  ul.navigation li a {
-    opacity: 0;
-  }
-  ul.navigation li a:hover, ul.navigation li a.active {
-    color: #fff !important;
-    opacity: .5;
-  }
-  ul.navigation li ul.dropdown {
-    display: block;
-    margin: 0;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    -webkit-transition: all .7s;
-    transition: all .7s;
-  }
-  ul.navigation li ul.dropdown li {
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  ul.navigation:before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: 0;
-    border-color: transparent transparent #000 transparent;
-    height: 0;
-    border-width: 0;
-    border-style: solid;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    opacity: 0;
-  }
-  ul.navigation.tapped {
-    background: #000;
-    padding: 30px;
-    margin-top: 50px;
-  }
-  ul.navigation.tapped:before {
-    border-width: 10px;
-    margin-left: -10px;
-    opacity: 1;
-  }
-  ul.navigation.tapped li {
-    max-height: 400px;
-  }
-  ul.navigation.tapped li a {
-    color: #fff;
-    opacity: 1;
-  }
-  ul.navigation.tapped li a:hover, ul.navigation.tapped li a.active {
-    opacity: .5;
-  }
-  ul.navigation.tapped li ul.dropdown {
-    position: relative;
-    text-align: center;
-    width: 100%;
-  }
-  ul.navigation.tapped li ul.dropdown li {
-    margin: 20px 0;
-  }
-  ul.navigation.tapped li.tapped ul.dropdown {
-    -webkit-transition: all .7s;
-    transition: all .7s;
-    opacity: 1;
-    max-height: 400px;
-  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1810,6 +1748,179 @@ ul.tag-list li {
 .green-bg p {
   font-size: 18px;
   opacity: 0.9;
+}
+
+/* Floating Navigation Styles */
+.floating-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.floating-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-nav li {
+  margin: 10px 0;
+}
+
+.floating-nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.floating-nav a:hover {
+  color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.floating-nav a.active {
+  color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+/* Fix for white page issue */
+.container-fluid {
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff;
+}
+
+/* Ensure content is visible */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for navigation visibility */
+header {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .floating-nav {
+    display: none;
+  }
+}
+
+/* Sticky Header Styles */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+
+  z-index: 1000;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Styles */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.sticky-header .navigation {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-header .navigation li {
+  margin: 0;
+}
+
+.sticky-header .navigation a {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.sticky-header .navigation a:hover,
+.sticky-header .navigation a.active {
+  color: #c5c5c5;
+}
+
+/* Social Links Styles */
+.sticky-header .social-links {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-header .social-links li {
+  margin: 0;
+}
+
+.sticky-header .social-links a {
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.sticky-header .social-links a:hover {
+  color: #727272;
+}
+
+/* Adjust content for sticky header */
+.container-fluid {
+  padding-top: 60px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .sticky-header {
+    padding: 8px 0;
+  }
+  
+  .sticky-header .navigation {
+    gap: 15px;
+  }
+  
+  .sticky-header .social-links {
+    gap: 10px;
+  }
+  
+  .sticky-header .navigation a {
+    font-size: 13px;
+  }
+  
+  .sticky-header .social-links a {
+    font-size: 14px;
+  }
 }
 
 
