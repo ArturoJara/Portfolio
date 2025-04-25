@@ -1359,7 +1359,7 @@ ul.tag-list li {
 /* Content Base Styles */
 .content,
 .content2 {
-  padding: 60px 0;
+  padding: 30px 0;
   position: relative;
 }
 
@@ -1924,3 +1924,176 @@ header {
 }
 
 
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 991px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-content {
+    position: relative;
+  }
+
+  .nav-left, .nav-right {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-left.active, .nav-right.active {
+    display: block;
+  }
+
+  .navigation, .social-links {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navigation li, .social-links li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navigation li a, .social-links li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    color: #333;
+  }
+
+  .social-links li a {
+    font-size: 16px;
+  }
+
+  .social-links li a.fa::before {
+    margin-right: 10px;
+  }
+
+  .social-links li a.fa-behance::after {
+    content: " Behance";
+  }
+
+  .social-links li a.fa-linkedin::after {
+    content: " LinkedIn";
+  }
+
+  .social-links li a.fa-file-pdf-o::after {
+    content: " CV";
+  }
+
+  .social-links li a.fa-envelope::after {
+    content: " Email";
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navigation, .social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li, .social-links li {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    left: 15px;
+    z-index: 1001;
+  }
+
+  .nav-left, .nav-right {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}

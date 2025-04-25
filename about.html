@@ -24,19 +24,32 @@
         <div class="container">
           <div class="col-md-12">
             <div class="header-content">
-              <div class="nav-left">
-                <ul class="navigation">
-                  <li><a href="index.html" class="active">Work</a></li>
-                  <li><a href="pages/about.html">About</a></li>
-                </ul>
-              </div>
-              <div class="nav-right">
-                <ul class="social-links">
-                  <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
-                  <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
-                  <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
-                  <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li>  
-                </ul>
+              <button class="mobile-menu-toggle">☰</button>
+              <div class="nav-wrapper">
+                <nav class="mobile-nav">
+                  <ul>
+                    <li><a href="index.html" class="active">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener">Behance</a></li>
+                    <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener">CV</a></li>
+                    <li><a href="mailto:arturojara1994@gmail.com" target="_blank">Email</a></li>
+                  </ul>
+                </nav>
+                <div class="nav-left">
+                  <ul class="navigation">
+                    <li><a href="index.html" class="active">Work</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                  </ul>
+                </div>
+                <div class="nav-right">
+                  <ul class="social-links">
+                    <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                    <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                    <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
+                    <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -163,40 +176,6 @@
         </div>
       </section>
 
-      <!-- Contact Form Section -->
-      <section class="content">
-        <div class="container">
-          <div class="row mt-xl mb-xl">
-            <div class="col-md-6 col-md-offset-3">
-              <h3>So let's make <span class="italic">work</span> together</h3>
-              <form id="form" action="/php/mail.php" class="form row mt-lg">
-                <div class="col-md-6">
-                  <div class="tag">What's your name? *</div>
-                  <input required type="text" name="name" class="form-control" aria-required="true">
-                </div>
-                <div class="col-md-6">
-                  <div class="tag">Phone number</div>
-                  <input type="tel" name="phone" class="form-control">
-                </div>
-                <div class="col-md-6">
-                  <div class="tag">E-mail address *</div>
-                  <input required type="email" name="email" class="form-control" aria-required="true">
-                </div>
-                <div class="col-md-6">
-                  <div class="tag">Website URL</div>
-                  <input type="url" name="website" class="form-control">
-                </div>
-                <div class="col-md-12">
-                  <div class="tag">Tell us what's up! *</div>
-                  <textarea required name="message" class="form-control" aria-required="true"></textarea>
-                  <button id="send" type="submit" class="btn btn-default">Send message</button>
-                  <span class="p-md">* These fields are required</span>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Footer -->
       <footer class="bottom">
@@ -242,5 +221,30 @@
     <script src="../modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="../js/assets/animsition.js"></script>
     <script src="../js/functions.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+  
+        menuToggle.addEventListener('click', function() {
+          mobileNav.classList.toggle('active');
+        });
+  
+        // Cerrar menú al hacer clic en un enlace
+        const allLinks = document.querySelectorAll('.mobile-nav a');
+        allLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+          });
+        });
+  
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(event) {
+          if (!event.target.closest('.header-content')) {
+            mobileNav.classList.remove('active');
+          }
+        });
+      });
+      </script>
   </body>
 </html>
