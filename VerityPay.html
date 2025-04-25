@@ -24,9 +24,11 @@
             <div class="header-content">
               <button class="mobile-menu-toggle">☰</button>
               <div class="nav-wrapper">
+
+                <!-- Mobile Navigation -->
                 <nav class="mobile-nav">
                   <ul>
-                    <li><a href="index.html" class="active">Work</a></li>
+                    <li><a href="index.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener">Behance</a></li>
                     <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -34,10 +36,12 @@
                     <li><a href="mailto:arturojara1994@gmail.com" target="_blank">Email</a></li>
                   </ul>
                 </nav>
+
+                <!-- Desktop Navigation -->
                 <div class="nav-left">
                   <ul class="navigation">
-                    <li><a href="index.html" class="active">Work</a></li>
-                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
                   </ul>
                 </div>
                 <div class="nav-right">
@@ -48,6 +52,7 @@
                     <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li>
                   </ul>
                 </div>
+
               </div>
             </div>
           </div>
@@ -113,7 +118,7 @@
             <div class="col-md-6">
               <img src="images/portfolio/Verity Pay.jpg" alt="Verity Pay platform interface" class="fadein">
               <div class="box pb-0">
-                <h3>A Modern Solution for Juror and Small-Payment Disbursements</h3>
+                <h3>A Modern Solution for Juror and Small-Payment Management</h3>
                 <p>Our goal is to become the leading juror payment platform in the U.S., replacing outdated systems that rely on mailing physical checks. Our solution also supports other institutions and their payees by eliminating the inefficiencies of printing, mailing, and cashing paper checks.</p>
               </div>
             </div>
@@ -608,17 +613,15 @@
     </script>
 
     <!-- Agrega estos estilos CSS -->
-
-
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.querySelector('.mobile-menu-toggle');
         const mobileNav = document.querySelector('.mobile-nav');
-  
+
         menuToggle.addEventListener('click', function() {
           mobileNav.classList.toggle('active');
         });
-  
+
         // Cerrar menú al hacer clic en un enlace
         const allLinks = document.querySelectorAll('.mobile-nav a');
         allLinks.forEach(link => {
@@ -626,7 +629,7 @@
             mobileNav.classList.remove('active');
           });
         });
-  
+
         // Cerrar menú al hacer clic fuera
         document.addEventListener('click', function(event) {
           if (!event.target.closest('.header-content')) {
@@ -634,6 +637,6 @@
           }
         });
       });
-      </script>
+    </script>
   </body>
 </html>
