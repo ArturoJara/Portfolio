@@ -30,19 +30,26 @@
         <div class="container">
           <div class="col-md-12">
             <div class="header-content">
-              <div class="nav-left">
-                <ul class="navigation">
-                  <li><a href="index.html" class="active">Work</a></li>
-                  <li><a href="pages/about.html">About</a></li>
-                </ul>
-              </div>
-              <div class="nav-right">
-                <ul class="social-links">
-                  <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
-                  <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
-                  <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
-                  <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li> 
-                </ul>
+              <button class="mobile-menu-toggle">☰</button>
+              <div class="nav-wrapper">
+                <div class="nav-left">
+                  <ul class="navigation">
+                    <li><a href="index.html" class="active">Work</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                  </ul>
+                </div>
+                <div class="nav-right">
+                  <ul class="social-links">
+                    <li><a href="https://www.behance.net/arturojara" target="_blank" rel="noopener" class="fa fa-behance" aria-label="Behance Profile"></a></li>
+                    <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
+                    <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
+                    <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li> 
+                    <li class="dark-mode-toggle">
+                      <input type="checkbox" id="darkModeToggle" class="dark-mode-checkbox">
+                      <label for="darkModeToggle" class="dark-mode-label"></label>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -169,5 +176,33 @@
     <script src="../modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="../js/assets/animsition.js"></script>
     <script src="../js/functions.js"></script>
+
+    <!-- Dark Mode JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const body = document.body;
+      
+      // Check for saved dark mode preference or default to light mode
+      const darkMode = localStorage.getItem('darkMode') === 'true';
+      
+      // Apply dark mode on page load if it was previously enabled
+      if (darkMode) {
+        body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+      }
+      
+      // Toggle dark mode when checkbox is clicked
+      darkModeToggle.addEventListener('change', function() {
+        if (this.checked) {
+          body.classList.add('dark-mode');
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('darkMode', 'false');
+        }
+      });
+    });
+    </script>
   </body>
 </html>

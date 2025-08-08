@@ -53,6 +53,10 @@
                     <li><a href="https://www.linkedin.com/in/arturojaratovar/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn Profile"></a></li>
                     <li><a href="images/Arturo Jara English CV.pdf" target="_blank" rel="noopener" class="fa fa-file-pdf-o" aria-label="Download CV"></a></li>
                     <li><a href="mailto:arturojara1994@gmail.com" target="_blank" class="fa fa-envelope" aria-label="Email"></a></li>
+                    <li class="dark-mode-toggle">
+                      <input type="checkbox" id="darkModeToggle" class="dark-mode-checkbox">
+                      <label for="darkModeToggle" class="dark-mode-label"></label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -899,5 +903,33 @@
         });
       });
       </script>
+
+    <!-- Dark Mode JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const body = document.body;
+      
+      // Check for saved dark mode preference or default to light mode
+      const darkMode = localStorage.getItem('darkMode') === 'true';
+      
+      // Apply dark mode on page load if it was previously enabled
+      if (darkMode) {
+        body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+      }
+      
+      // Toggle dark mode when checkbox is clicked
+      darkModeToggle.addEventListener('change', function() {
+        if (this.checked) {
+          body.classList.add('dark-mode');
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('darkMode', 'false');
+        }
+      });
+    });
+    </script>
   </body>
 </html>
