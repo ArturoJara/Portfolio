@@ -948,7 +948,7 @@ ul.comments li.comment ul.comments li.comment .comment-body p {
 footer {
   height: 64px;
   line-height: 64px;
-  background: #363636;
+  background: transparent;
   position: absolute;
   left: 0;
   right: 0;
