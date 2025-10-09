@@ -830,7 +830,7 @@ footer.bottom a {
 }
 
 .social-links li a {
-  color: #000;
+  color: #fff;
   margin: 10px 15px;
   text-decoration: none;
   -webkit-transition: color .3s;
@@ -838,7 +838,7 @@ footer.bottom a {
 }
 
 .social-links li a:hover {
-  color: #727272;
+  color: #ffffff;
 }
 
 /*
