@@ -1,0 +1,574 @@
+/* Design Process Cards - Design Thinking */
+.design-process-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.design-process-card {
+  flex: 1;
+  min-width: 140px;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Circular colored background behind each card */
+.design-process-card::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: #E1A302;
+  opacity: 0.4;
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
+}
+
+.design-process-card:nth-child(1)::before {
+  background: #E1A302;
+}
+
+.design-process-card:nth-child(2)::before {
+  background: #9F1818;
+}
+
+.design-process-card:nth-child(3)::before {
+  background: #025FC0;
+}
+
+.design-process-card:nth-child(4)::before {
+  background: #B71178;
+}
+
+.design-process-card:nth-child(5)::before {
+  background: #119F45;
+}
+
+.design-process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.design-process-card:nth-child(1):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.3);
+}
+
+.design-process-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(159, 24, 24, 0.3);
+}
+
+.design-process-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(2, 95, 192, 0.3);
+}
+
+.design-process-card:nth-child(4):hover {
+  box-shadow: 0 12px 30px rgba(183, 17, 120, 0.3);
+}
+
+.design-process-card:nth-child(5):hover {
+  box-shadow: 0 12px 30px rgba(17, 159, 69, 0.3);
+}
+
+.design-process-card .process-number {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 15px;
+  opacity: 0.7;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.design-process-card:nth-child(1) .process-number {
+  color: #E1A302;
+}
+
+.design-process-card:nth-child(2) .process-number {
+  color: #9F1818;
+}
+
+.design-process-card:nth-child(3) .process-number {
+  color: #025FC0;
+}
+
+.design-process-card:nth-child(4) .process-number {
+  color: #B71178;
+}
+
+.design-process-card:nth-child(5) .process-number {
+  color: #119F45;
+}
+
+.design-process-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.design-process-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for design process cards */
+@media screen and (max-width: 992px) {
+  .design-process-grid {
+    gap: 15px;
+  }
+  
+  .design-process-card {
+    min-width: calc(50% - 10px);
+    padding: 25px 18px;
+  }
+  
+  .design-process-card .process-number {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .design-process-card {
+    min-width: 100%;
+    padding: 20px;
+  }
+  
+  .design-process-card .process-number {
+    font-size: 36px;
+  }
+  
+  .design-process-card h4 {
+    font-size: 16px;
+  }
+  
+  .design-process-card p {
+    font-size: 13px;
+  }
+}
+
+/* Dark mode for design process cards */
+body.dark-mode .design-process-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .design-process-card::before {
+  opacity: 0.5;
+}
+
+body.dark-mode .design-process-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .design-process-card:nth-child(1):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.4);
+}
+
+body.dark-mode .design-process-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(159, 24, 24, 0.4);
+}
+
+body.dark-mode .design-process-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(2, 95, 192, 0.4);
+}
+
+body.dark-mode .design-process-card:nth-child(4):hover {
+  box-shadow: 0 12px 30px rgba(183, 17, 120, 0.4);
+}
+
+body.dark-mode .design-process-card:nth-child(5):hover {
+  box-shadow: 0 12px 30px rgba(17, 159, 69, 0.4);
+}
+
+body.dark-mode .design-process-card .process-number {
+  opacity: 0.6;
+}
+
+body.dark-mode .design-process-card h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .design-process-card p {
+  color: #e0e0e0;
+}
+
+/* Competitive Analysis Cards */
+.competitive-section {
+  margin-top: 60px;
+}
+
+.competitive-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.competitive-section-title:before {
+  display: none;
+}
+
+.competitive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.competitive-card {
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Circular colored background behind each competitive card */
+.competitive-card::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: #E1A302;
+  opacity: 0.3;
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
+}
+
+.competitive-card:nth-child(1)::before {
+  background: #E1A302;
+}
+
+.competitive-card:nth-child(2)::before {
+  background: #025FC0;
+}
+
+.competitive-card:nth-child(3)::before {
+  background: #B71178;
+}
+
+.competitive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.competitive-card:nth-child(1):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.3);
+}
+
+.competitive-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(2, 95, 192, 0.3);
+}
+
+.competitive-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(183, 17, 120, 0.3);
+}
+
+.competitive-card-header {
+  margin-bottom: 15px;
+  padding-bottom: 0;
+}
+
+.competitive-card-header h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.competitive-card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.competitive-card-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.competitive-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.competitive-card-body ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.competitive-card-body ul li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.competitive-card-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for competitive cards */
+@media screen and (max-width: 992px) {
+  .competitive-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .competitive-card {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .competitive-section-title {
+    font-size: 20px;
+  }
+  
+  .competitive-card {
+    padding: 18px;
+  }
+  
+  .competitive-card-header h5 {
+    font-size: 16px;
+  }
+  
+  .competitive-card-body p,
+  .competitive-card-body ul li {
+    font-size: 13px;
+  }
+}
+
+/* Dark mode for competitive cards */
+body.dark-mode .competitive-section-title {
+  color: #ffffff;
+}
+
+body.dark-mode .competitive-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .competitive-card::before {
+  opacity: 0.4;
+}
+
+body.dark-mode .competitive-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .competitive-card:nth-child(1):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.4);
+}
+
+body.dark-mode .competitive-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(2, 95, 192, 0.4);
+}
+
+body.dark-mode .competitive-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(183, 17, 120, 0.4);
+}
+
+/* Key Insights Cards */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.insight-card {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Circular colored background behind each insight card */
+.insight-card::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: #E1A302;
+  opacity: 0.3;
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
+}
+
+.insight-card:nth-child(1)::before {
+  background: #E1A302;
+}
+
+.insight-card:nth-child(2)::before {
+  background: #025FC0;
+}
+
+.insight-card:nth-child(3)::before {
+  background: #119F45;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.insight-card:nth-child(1):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.3);
+}
+
+.insight-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(2, 95, 192, 0.3);
+}
+
+.insight-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(17, 159, 69, 0.3);
+}
+
+.insight-card-header {
+  margin-bottom: 15px;
+  padding-bottom: 0;
+}
+
+.insight-card-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card-header h4:before {
+  display: none;
+}
+
+.insight-card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.insight-card-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for insight cards */
+@media screen and (max-width: 992px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .insight-card {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .insight-card {
+    padding: 20px;
+  }
+  
+  .insight-card-header h4 {
+    font-size: 16px;
+  }
+  
+  .insight-card-body p {
+    font-size: 13px;
+  }
+}
+
+/* Dark mode for insight cards */
+body.dark-mode .insight-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .insight-card::before {
+  opacity: 0.4;
+}
+
+body.dark-mode .insight-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .insight-card:nth-child(1):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.4);
+}
+
+body.dark-mode .insight-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(2, 95, 192, 0.4);
+}
+
+body.dark-mode .insight-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(17, 159, 69, 0.4);
+}
+
+
