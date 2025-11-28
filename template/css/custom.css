@@ -38,25 +38,24 @@
   -webkit-filter: blur(40px);
 }
 
+
 .design-process-card:nth-child(1)::before {
-  background: #E1A302;
-}
-
-.design-process-card:nth-child(2)::before {
-  background: #9F1818;
-}
-
-.design-process-card:nth-child(3)::before {
   background: #025FC0;
 }
-
+.design-process-card:nth-child(2)::before {
+  background: #119F45;
+}
+.design-process-card:nth-child(3)::before {
+  background: #E1A302;
+}
 .design-process-card:nth-child(4)::before {
+  background: #9F1818;
+}
+.design-process-card:nth-child(5)::before {
   background: #B71178;
 }
 
-.design-process-card:nth-child(5)::before {
-  background: #119F45;
-}
+
 
 .design-process-card:hover {
   transform: translateY(-5px);
@@ -65,24 +64,28 @@
   background-color: rgba(255, 255, 255, 0.15);
 }
 
+
+
+
+
 .design-process-card:nth-child(1):hover {
-  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.3);
-}
-
-.design-process-card:nth-child(2):hover {
-  box-shadow: 0 12px 30px rgba(159, 24, 24, 0.3);
-}
-
-.design-process-card:nth-child(3):hover {
   box-shadow: 0 12px 30px rgba(2, 95, 192, 0.3);
 }
 
+.design-process-card:nth-child(2):hover {
+  box-shadow: 0 12px 30px rgba(17, 159, 69, 0.3);
+}
+
+.design-process-card:nth-child(3):hover {
+  box-shadow: 0 12px 30px rgba(225, 163, 2, 0.3);
+}
+
 .design-process-card:nth-child(4):hover {
-  box-shadow: 0 12px 30px rgba(183, 17, 120, 0.3);
+  box-shadow: 0 12px 30px rgba(159, 24, 24, 0.3);
 }
 
 .design-process-card:nth-child(5):hover {
-  box-shadow: 0 12px 30px rgba(17, 159, 69, 0.3);
+  box-shadow: 0 12px 30px rgba(183, 17, 120, 0.3);
 }
 
 .design-process-card .process-number {
