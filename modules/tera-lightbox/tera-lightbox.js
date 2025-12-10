@@ -1,7 +1,7 @@
 /*
 
 Tera Lightbox JS
-Version 3.2
+Version 4.0
 Made by Themanoid
 
 */
@@ -10,12 +10,13 @@ Made by Themanoid
 
     "use strict"; // Strict mode
 
-    var $lightboxContainer = $('<div id="lightbox"><div class="controls"><div class="galleryPrev ion-ios-arrow-left"></div><div class="galleryNext  ion-ios-arrow-right"></div><div class="galleryClose ion-ios-close-empty fa-2x"></div></div>');
+    var $lightboxContainer = $('<div id="lightbox"><div class="lightbox-inner"><div class="controls"><div class="galleryPrev"><span class="ion-ios-arrow-left"></span></div><div class="galleryNext"><span class="ion-ios-arrow-right"></span></div><div class="galleryClose ion-ios-close-empty fa-2x"></div></div></div>');
     if($('.lightbox').length)
         $('body').append($lightboxContainer);
     var $gallery = [],
         $galleryCaption = [],
-        $galleryIndex = 0;
+        $galleryIndex = 0,
+        $lightboxInner = $('body').find('.lightbox-inner');
 
     function isYoutube(url) {
       var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
@@ -72,6 +73,9 @@ Made by Themanoid
           'transform': 'scale(.95)',
           'transition': 'opacity .3s, transform .3s'
         });
+        $('.galleryClose').css({
+          'opacity' : 0,
+        });
         setTimeout(function(){
           $('#lightbox [data-index]').attr('data-index', newIndex); // Give the image a new index
           loadLightbox(newIndex,$gallery[newIndex],$galleryCaption[newIndex]);
@@ -86,7 +90,7 @@ Made by Themanoid
         $lightboxContainer.find('.caption').fadeOut(200, function(){$(this).remove();});
         if(href.indexOf(".mp4") > -1){
           $lightboxItem = $('<video class="lightbox-item" autoplay loop data-index="'+$index+'"><source src="'+href+'" type="video/mp4"></video>');
-          $lightboxContainer.append($lightboxItem).fadeIn(); // Fade in lightbox
+          $lightboxInner.append($lightboxItem).parent().fadeIn().css('display','flex'); // Fade in lightbox
           setTimeout(function(){
             $('.lightbox-item').css({
               'opacity' : 1,
@@ -96,7 +100,7 @@ Made by Themanoid
         }
         if(isYoutube(href) || isVimeo(href)) { // Check if it's Vimeo or YouTube
             $lightboxItem = $('<iframe class="lightbox-item" src="'+href+'" frameborder="0" allowfullscreen data-index="'+$index+'"/></iframe>');
-            $lightboxContainer.append($lightboxItem).fadeIn(); // Fade in lightbox
+            $lightboxInner.append($lightboxItem).parent().fadeIn().css('display','flex'); // Fade in lightbox
             setTimeout(function(){
               $('.lightbox-item').css({
                 'opacity' : 1,
@@ -107,7 +111,7 @@ Made by Themanoid
         else {
             $lightboxItem = $('<img class="lightbox-item" src="'+href+'" data-index="'+$index+'"/>');
             $lightboxItem = $lightboxItem.load(function(){
-                $lightboxContainer.append($(this)).fadeIn(); // Fade in lightbox
+                $lightboxInner.append($(this)).parent().fadeIn().css('display','flex'); // Fade in lightbox
                 setTimeout(function(){
                   $lightboxItem.css({
                     'opacity' : 1,
@@ -120,6 +124,12 @@ Made by Themanoid
           $lightboxContainer.append($lightboxCaption)
           $lightboxCaption.delay(200).fadeIn(); // Fade in caption
         }
+        setTimeout(function(){
+          $('.galleryClose').css({
+            'opacity' : 1
+          });
+        }, 1300);
+
     }
 
 })(jQuery);
