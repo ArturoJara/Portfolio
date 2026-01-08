@@ -495,9 +495,9 @@
         <div class="col-8">
           <div class="content-block">
             <h3>Empathy Map</h3>
-            <h2>Understanding the Student Experience</h2>
-            <p>To deeply understand our users, I created an empathy map that captures what students say, think, do, and feel when interacting with the app. This visualization helped identify pain points, motivations, and opportunities for improvement.</p>
-            <img src="images/projects/CeuxAppEmpathy Map.png" alt="Student Persona">
+            <h2>Understanding the Payment Automation Experience</h2>
+            <p>To deeply understand how businesses and payees interact with VerityPay’s SMS Automation, I created an empathy map capturing what users say, think, do, and feel throughout the payment flow. This exercise helped surface key pain points around trust, clarity, and confirmation, while also revealing strong motivations for speed, simplicity, and reliability—directly informing how SMS automation was designed and prioritized in the platform.</p>
+            <img  src="images/projects/VerityPayEmpathyMap.png">
           </div>
         </div>
       </div>
@@ -519,13 +519,13 @@
         <div class="col-4">
           <div class="content-block">
             <h3>Primary Persona</h3>
-            <img src="images/projects/CeuxAppUserPersona1.png" alt="Student Persona">
+            <img src="images/projects/VerityPayPersona1.jpg" alt="Student Persona">
           </div>
         </div>
         <div class="col-4">
           <div class="content-block">
             <h3>Secondary Persona</h3>
-            <img src="images/projects/CeuxAppUserPersona2.png" alt="Student Persona">
+            <img src="images/projects/VerityPayPersona2.jpg" alt="Student Persona">
           </div>
         </div>
       </div>
@@ -538,9 +538,9 @@
         <div class="col-8">
           <div class="content-block">
             <h3>Journey Map</h3>
-            <h2>Understanding the Student path</h2>
-            <p>To deeply understand our users, I created an empathy map that captures what students say, think, do, and feel when interacting with the app. This visualization helped identify pain points, motivations, and opportunities for improvement.</p>
-            <img src="images/projects/CeuxAp User Journey.png" alt="Student Persona">
+            <h2>Payment Workflow</h2>
+            <p>To better understand how stakeholders interact with VerityPay, I mapped the complete payment journey across key stages—from setup to reconciliation. This journey map highlights user goals, system touchpoints, and moments of friction within legacy processes, while revealing how SMS automation, real-time analytics, and centralized dashboards reduce operational overhead, improve accuracy, and increase user confidence throughout the payment lifecycle.</p>
+            <img src="images/projects/VerityPayuserJourney.png" alt="Student Persona">
           </div>
         </div>
       </div>
@@ -560,23 +560,6 @@
               </div>
           </section>
 
-                    <!-- #Crazy 8 -->
-      <section class="mb-xl">
-        <div class="container">
-          <div class="grid">
-            <div class="col-8">
-              <div class="content-block">
-                <h3>Rapid-brainstorming</h3>
-                <h2>Eight rapid sketches led to one standout concept for improving the CEUX process.</h2>
-                <p>The student journey map revealed key friction points across the academic process. With these insights, I moved into rapid ideation.</p>
-
-                <p>The Crazy 8 sprint introduced tight time and creativity constraints, leading to one standout concept: <b>A smart academic assistant powered by AI to streamline student tasks, guidance, and campus workflows.</b></p>
-                <img class="col-8" src="images/projects/CeuxApp Wireframes.png">
-              </div>
-            </div>
-          </div>
-        </div>
-</section>
 
                     <!-- #MoSCow  -->
                     <section class="mb-xl">
@@ -585,19 +568,25 @@
                           <div class="col-8">
                             <div class="content-block">
                               <h3>MoSCow</h3>
-                              <h2>Defining a focused MVP with the MoSCoW method</h2>
-                              <p>With a tight timeline for the MVP, narrowing the scope was essential to ensure meaningful impact. Using the MoSCoW matrix, I identified the features that would most effectively improve the student experience within CEUX App.</p>
+                              <h2>Defining a focused MVP for SMS Templates</h2>
+                              <p>With a tight timeline for the SMS Automation MVP, defining a clear and realistic scope was critical. Using the MoSCoW framework, I prioritized the SMS Template features that would deliver the highest operational value while reducing manual effort and messaging errors.</p>
         
-                              <p>The analysis revealed that prioritizing the student submission overview and the review flow interface would create the highest value—streamlining a previously fragmented process and setting the foundation for a more reliable, intuitive system.</b></p>
+                              <p>The analysis showed that focusing on core template creation, dynamic variables, and approval-ready messaging would have the greatest impact—enabling faster payment notifications, consistent communication, and a scalable foundation for future automation within VerityPay.</b></p>
                               <div class="design-process-grid">
                                 <div class="design-process-card">
                                   <h4>Must</h4>
                                  <ul>
                                   <li>
-                                    Streamlined submission flow to reduce confusion and redundant actions.
+                                    Core SMS template creation with editable message structure.
                                   </li>
                                   <li>
-                                    Redesigned design-review page with clearer steps and expectations.
+                                    Support for dynamic variables (e.g. payment amount, recipient name, reference ID).
+                                   </li>
+                                   <li>
+                                    Template validation to ensure Pilvo compliance and successful message delivery.
+                                   </li>
+                                   <li>
+                                    Clear template status (draft, active, disabled) to avoid sending incorrect messages.
                                    </li>
                                  </ul>
                                 </div>
@@ -605,21 +594,27 @@
                                   <h4>Should</h4>
                                   <ul>
                                     <li>
-                                      Automated reminders/notifications for upcoming steps or missing requirements.
+                                      Preview mode to visualize the final SMS before sending.
                                     </li>
                                     <li>
-                                      Standardized layout that ensures consistency across different screens.
+                                      Basic approval or locking mechanism to prevent accidental edits to live templates.
                                      </li>
+                                     <li>
+                                      Character count and SMS-length indicators to control costs and truncation.                                     
+                                    </li>
                                    </ul>
                                 </div>
                                 <div class="design-process-card">
                                   <h4>Could</h4>
                                   <ul>
                                     <li>
-                                      Optional tips or micro-guides for first-time users.
+                                      Pre-built template suggestions for common payment scenarios.
                                     </li>
                                     <li>
-                                      Smart suggestions to help students fix common mistakes before submitting.
+                                      Optional tone or wording recommendations based on use case.
+                                     </li>
+                                     <li>
+                                      Duplicate template functionality to speed up creation.
                                      </li>
                                    </ul>
                                 </div>
@@ -627,10 +622,13 @@
                                   <h4>Won't</h4>
                                   <ul>
                                     <li>
-                                      Cross-department integration beyond the immediate review team.
+                                      Advanced personalization per individual recipient.
                                     </li>
                                     <li>
-                                      Advanced personalization features for unique student profiles.
+                                      Multi-channel templates beyond SMS (email, push, WhatsApp).
+                                     </li>
+                                     <li>
+                                      Complex automation rules outside the core payment flow.     
                                      </li>
                                    </ul>
                                 </div>
