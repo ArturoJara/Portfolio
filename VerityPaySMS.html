@@ -81,7 +81,7 @@
                 </div>
                 <div class="project-data">
                   <div class="title">Type</div>
-                  <div class="desc">B2C Web App</div>
+                  <div class="desc">Mobile</div>
                 </div>
               </div>
               <div class="col-1">
@@ -103,7 +103,8 @@
               <div id="img-carousel" class="titanSlider">
                 <ul class="slides">
                   <li class="slide"><img src="images/projects/SMSMessage1.png" class="fw"></li>
-                  <li class="slide"><img src="images/projects/VeritypaySMSTemplates2.png" class="fw"></li>
+                  <li class="slide"><img src="images/projects/SMSMessage2.png" class="fw"></li>
+                
                   <li class="slide"><img src="images/projects/VeritypaySMSTemplates3.png" class="fw"></li>
                   <li class="slide"><img src="images/projects/VeritypaySMSTemplates1.png" class="fw"></li>
                 </ul>
@@ -117,16 +118,16 @@
    <section class="mb-xl">
     <div class="container">
       <div class="grid">
-        <div class="col-4">
+        <div class="col-6">
           <div class="content-block">
             <h3>Product Overview</h3>
             <h2>A modern FinTech platform built for simplicity, security, and scale</h2>
             <p>VerityPay is a next-generation FinTech platform designed to simplify consumer payments without adding technical complexity. Leveraging the latest financial and technology trends, it enables businesses to send secure payments directly to consumers while requiring minimal internal IT support and no additional hardware or software installations.</p>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-2">
           <div class="content-block">
-            <img class="col-8" src="images/projects/VeritypayImage.png">
+            <img class="col-8" src="images/projects/SMSMessageProductOverview.png">
           </div>
         </div>
       </div>
@@ -142,23 +143,30 @@
       <div class="grid">
         <div class="col-4">
           <div class="content-block">
-            <img class="col-8" src="images/projects/VeritypayImage2.png">
+            <img class="col-8" src="images/projects/SMSMessageImage1.png">
           </div>
         </div>
         <div class="col-4">
           <div class="content-block">
             <h3>Problem Statement</h3>
-            <p>To send automated SMS messages at scale through Pilvo, VerityPay requires templates to be approved in advance. Previously, the platform did not provide clear visibility into the approval status of SMS templates, making it difficult for businesses to know whether a message was ready for mass delivery. This lack of transparency increased the risk of failed sends, delays, and inefficient manual follow-ups.</p>
+            <p>When a business needs to collect a payment, VerityPay automatically sends an SMS containing a secure payment link to the end user. However, the SMS is not personalized and does not contain the amount of the payment.</p>
           </div>
           <div class="content-block">
             <h3>Goals</h3>
             <p>The goal was to design a payment platform that simplifies consumer payouts while maintaining high security and operational efficiency. VerityPay aims to:</p>
             <ul>
-              <li>Provide clear and immediate visibility into the approval status of each SMS template.</li>
-              <li>Ensure all SMS templates comply with provider and platform requirements before mass delivery.</li>
-              <li>Reduce failed or delayed SMS campaigns caused by unapproved templates.</li>
-              <li>Enable reliable, scalable SMS automation between Payors and Payees.</li>
-              <li>Improve user confidence and efficiency when managing SMS communications.</li>
+              <p>Ensure that the user: </p>
+              <li> Receives the payment request instantly</li>
+              <li> Recognizes the message as legitimate</li>
+              <li> Can access the payment flow with a single tap</li>
+              </p>Previous problem: </p>
+              <li> Users were unsure whether the SMS link was valid or secure</li>
+              <li> Lack of trust in SMS-based payment requests</li>
+              <li> Resulted in incomplete payments and manual follow-ups by businesses</li>
+              <p>Expected outcome: </p>
+              <li> Higher link open rates</li>
+              <li> Reduced early drop-off due to uncertainty</li>
+              Reduced early drop-off due to uncertainty
             </ul>
           </div>
         </div>
@@ -174,313 +182,83 @@
             <div class="col-8">
               <div class="content-block">
                 <h3>Solution</h3>
-                <p>VerityPay enhances its modern payment experience by introducing a structured SMS Template Approval workflow that enables businesses to send payments and notifications to consumers via automated SMS at scale. By validating templates before delivery through Pilvo, the platform ensures messages are compliant, consistent, and ready for mass distribution.</p>
+                <p>We designed an end-to-end SMS-based payment flow that provides users with a clear, secure, and frictionless way to complete payments without requiring an app download.</p>
 
-                <p>This solution provides clear visibility into template status, allowing businesses to confidently activate approved messages without delays or manual verification. Combined with VerityPay’s secure, low-cost transactions and real-time tracking, the approval process reduces operational friction, prevents failed sends, and supports reliable communication between Payors and Payees. As a result, VerityPay delivers a faster, more accurate, and scalable SMS-driven payment experience—without adding technical complexity.</p>
-                <img class="col-8" src="images/projects/VeritypayImage5.png">
+                <p>The solution centers around sending a trusted, branded SMS payment link that leads to a mobile-responsive web experience. Upon opening the link, users are guided through a lightweight identity verification step to ensure security while maintaining ease of use.</p>
+
+                 <p>Once verified, users are presented with a transparent payment summary that clearly displays who is requesting the payment, the total amount due, and the available payment methods. Instead of collecting sensitive financial information directly, the flow integrates with well-known third-party providers such as PayPal and Venmo, increasing user trust and reducing cognitive friction.</p>
+
+                 <p>By clearly defining each step of the process and supporting users with explicit system states and feedback, the solution minimizes uncertainty, reduces failed payments, and enables businesses to confidently send payment requests at scale.</p>
+
+                <img class="col-8" src="images/projects/SMS Electronic Payment Link.png">
 
               </div>
             </div>
-            <div class="col-8 text-center"><a href="https://www.figma.com/design/h4ndpMXre6TTYW3RycVejg/VerityPay_Design?node-id=22171-103477&t=r3PWWyz3SbtkQYUa-1" target="_blank" class=" btn-primary" >View final prototype</a></div>
+            <div class="col-8 text-center"><a href="https://www.figma.com/proto/h4ndpMXre6TTYW3RycVejg/VerityPay_Design?node-id=20649-114598&t=lG85HF9EOfXA4S1Z-1" target="_blank" class=" btn-primary" >View final prototype</a></div>
           </div>
         </div>
 </section>
 
+
+
+<section class="mb-xl">
+  <div class="container">
+    <div class="grid content">
+      <div class="col-8">
+        <div class="content-block">
+          <h3 class="text-center">Key UX Descitions</h3>
+          <h2 class="text-center">Delivering a safer, faster, and more easy payment flow</h2>
+ 
+          <li> SMS as the primary entry point</li>
+          <p> We used SMS as the main channel to meet users where they already are, reducing friction and eliminating the need for app downloads or account creation.</p> 
+          
+          <li>  Lightweight identity verification</li>
+          <p> A single-step verification (e.g., date of birth) was implemented to balance security and usability, protecting sensitive payment access without overwhelming users.</p>
+          
+          <li> Mobile web over native app</li>
+          <p> A responsive web experience ensured immediate access across devices and browsers, especially for first-time or one-off payments.</p>
+          
+          <li> Third-party payment providers</li>
+          <p> Integrating PayPal and Venmo leveraged existing user trust and avoided asking users to enter sensitive financial information directly.</p>
+          
+          <li> Clear system states and feedback</li>
+          <p> Success, error, and edge states were explicitly designed to reduce uncertainty and prevent users from getting stuck in the flow.</p>
   
-  <section class="mb-xl">
-    <div class="container">
-      <div class="grid content">
-        <div class="col-8">
-          <div class="content-block">
-            <h3 class="text-center">Research Phase</h3>
-            <h2 class="text-center">Building the SMS template Pilvo approval and sequences</h2>
-          </div>
-        </div>
-      </div>
-  </section>
-
-
-  <!-- #Competitive Analysis -->
-  <section class="mb-xl">
-    <div class="container">
-      <div class="grid content">
-        <div class="col-8">
-          <div class="content-block">
-            <h3>Competitive Analysis</h3>
-            <h2>SMS-Based Payments vs. Traditional Payout Platforms</h2>
-            <p>Many traditional payment platforms introduce friction by requiring app downloads, account creation, or multi-step payout flows. These barriers often lead to delayed payments, higher abandonment, and lower user trust. In contrast, SMS-based payment systems prioritize speed and simplicity, allowing Payees to receive funds through direct, secure messages while enabling Payors to deliver payments with real-time visibility and fewer failure points.</p>
-            <img src="images/projects/VerityPayCompetitiveAnalysis.png" alt="">
-          </div>
-        </div>
-      </div>
-
-      <!-- Value Proposition 
-      <div class="competitive-section">
-        <h4 class="competitive-section-title">Value Proposition</h4>
-        <div class="competitive-grid">
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Our Product</h5>
-            </div>
-            <div class="competitive-card-body">
-              <p>Offers a unified platform for students to manage schedules, grades, administrative tasks, and campus news in one app.</p>
-            </div>
-          </div>
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Competitor 1</h5>
-            </div>
-            <div class="competitive-card-body">
-              <p>Combines academic content, assignments, and grades within the same platform.</p>
-            </div>
-          </div>
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Competitor 2</h5>
-            </div>
-            <div class="competitive-card-body">
-              <p>Offers strong social features, including student forums, event RSVPs, and study groups.</p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Strengths 
-      <div class="competitive-section">
-        <h4 class="competitive-section-title">Strengths</h4>
-        <div class="competitive-grid">
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Our Product</h5>
-            </div>
-            <div class="competitive-card-body">
-              <ul>
-                <li>Immediate updates and notifications keep students informed and engaged.</li>
-                <li>Personalization features cater to individual preferences, enhancing the user experience.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Competitor 1</h5>
-            </div>
-            <div class="competitive-card-body">
-              <ul>
-                <li>Strong integration with the university's LMS, making it easy for students to access course materials and track their academic progress.</li>
-                <li>A broad range of tools for both academic and administrative tasks in one place.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Competitor 2</h5>
-            </div>
-            <div class="competitive-card-body">
-              <ul>
-                <li>Some features, like viewing downloaded materials offline, are useful for students with limited internet.</li>
-                <li>Facilitates student interaction through forums, groups, and event management tools, fostering a strong campus community.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="competitive-section">
-        <h4 class="competitive-section-title">Weaknesses</h4>
-        <div class="competitive-grid">
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Our Product</h5>
-            </div>
-            <div class="competitive-card-body">
-              <ul>
-                <li>Lacks robust social interaction tools compared to competitors.</li>
-                <li>Features are primarily student-focused, with less emphasis on tools for faculty or staff.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Competitor 1</h5>
-            </div>
-            <div class="competitive-card-body">
-              <ul>
-                <li>The extensive range of features can make the app overwhelming and difficult to navigate, especially for new users.</li>
-                <li>The user interface feels outdated compared to more modern competitors, impacting overall user experience.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="competitive-card">
-            <div class="competitive-card-header">
-              <h5>Competitor 2</h5>
-            </div>
-            <div class="competitive-card-body">
-              <ul>
-                <li>The focus on social and service features can distract from core academic functionalities, leading to a less cohesive experience.</li>
-                <li>Not UX focused.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  
-  <!-- #Key Findings -->
-  <section class="mb-xl">
-    <div class="container">
-      <div class="grid content">
-        <div class="col-8">
-          <div class="content-block">
-            <h3>User Interviews</h3>
-            <h2>What the data revealed</h2>
-            <p>Through focused user research — including interviews with 10 Payors and 20 Payees — we gathered qualitative and quantitative insights into how SMS-based payments are created, approved, and delivered in VerityPay. While both roles interact with SMS payments, the research prioritized Payors, who are responsible for configuring and managing SMS templates at scale.</p>
-
-            <p>The findings revealed key patterns around approval visibility, confidence in message compliance, and readiness for mass delivery. Payors expressed a strong need for clear template status, predictable approval timelines, and assurance that approved messages would be reliably delivered through the SMS provider. These insights directly informed improvements to the SMS Payments and Template Approval system, reinforcing transparency, reducing operational uncertainty, and enabling Payors to confidently trigger large-scale payment communications.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Key Stats Callouts -->
-      <div class="key-stats-grid">
-        <div class="stat-callout">
-          <div class="stat-number">80%</div>
-          <div class="stat-label">of traditional payment platforms require users to download an app or create an account, adding unnecessary friction before a payment can be received.</div>
-        </div>
-        <div class="stat-callout">
-          <div class="stat-number">70%</div>
-          <div class="stat-label">of Payees prefer receiving payments through direct SMS notifications, especially for one-time or infrequent payouts, due to speed and ease of use.</div>
-        </div>
-        <div class="stat-callout">
-          <div class="stat-number">55%</div>
-          <div class="stat-label">of payout failures are linked to multi-step payment flows, while SMS-based payment links reduce abandonment by keeping the process simple and immediate.</div>
-        </div>
-        <div class="stat-callout">
-          <div class="stat-number">35%</div>
-          <div class="stat-label">faster payment completion is achieved on platforms that deliver payments via SMS with real-time tracking, compared to email-only or portal-based systems.</div>
-        </div>
-        <div class="stat-callout">
-          <div class="stat-number">40%</div>
-          <div class="stat-label">higher user confidence is reported when payments are delivered through secure, compliant SMS messaging with clear sender identification and confirmation steps.</div>
-        </div>
-      </div>
-
-      <!-- Findings Grid -->
-      <div class="findings-grid">
-        <!-- Finding 1 -->
-        <div class="finding-card">
-          <div class="finding-header">
-            <h4>Payors value simplicity over customization</h4>
-            <div class="finding-chart">
-              <div class="bar-chart-container">
-                <div class="bar-chart-label">82%</div>
-                <div class="bar-chart-bar" style="width: 82%; background: linear-gradient(90deg, #ED8D18 0%, #FFAE4C 100%);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="finding-body">
-            <p>Payors consistently prioritized the ability to send payments quickly through predefined, approved SMS templates, rather than spending time creating or managing complex message variations.</p>
-          </div>
-        </div>
-
-        <!-- Finding 2 -->
-        <div class="finding-card">
-          <div class="finding-header">
-            <h4>Template approval increases confidence and usage</h4>
-            <div class="finding-chart">
-              <div class="bar-chart-container">
-                <div class="bar-chart-label">68%</div>
-                <div class="bar-chart-bar" style="width: 68%; background: linear-gradient(90deg, #ED8D18 0%, #FFAE4C 100%);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="finding-body">
-            <p>Clear approval status for SMS templates reduced hesitation among Payors and increased their willingness to use SMS as the primary payment delivery channel.</p>
-          </div>
-        </div>
-
-        <!-- Finding 3 -->
-        <div class="finding-card">
-          <div class="finding-header">
-            <h4>Message clarity directly impacts payment completion</h4>
-            <div class="finding-chart">
-              <div class="bar-chart-container">
-                <div class="bar-chart-label">43%</div>
-                <div class="bar-chart-bar" style="width: 43%; background: linear-gradient(90deg, #ED8D18 0%, #FFAE4C 100%);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="finding-body">
-            <p>Both Payors and Payees showed higher completion rates when SMS messages were concise, clearly branded, and followed a consistent structure enabled by approved templates.</p>
-          </div>
-        </div>
-
-        <!-- Finding 4 -->
-        <div class="finding-card">
-          <div class="finding-header">
-            <h4>Reliable SMS delivery strengthens trust in the platform</h4>
-            <div class="finding-chart">
-              <div class="bar-chart-container">
-                <div class="bar-chart-label">41%</div>
-                <div class="bar-chart-bar" style="width: 41%; background: linear-gradient(90deg, #ED8D18 0%, #FFAE4C 100%);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="finding-body">
-            <p>Payors perceived the SMS payment system as more dependable when templates were pre-approved and validated, reinforcing trust in VerityPay for high-volume or time-sensitive payouts.</p>
-          </div>
-        </div>
-
-
-    </div>
-  </section>
-
-<!-- #Pain Points -->
-  <section class="mb-xl">
-    <div class="container">
-      <div class="grid">
-
-        <div class="col-8">
-          <ul class="accordion">
-            <li class="head">
-              <div class="head">
-                <div class="title">Pain Point 1</div>
-              </div>
-              <div class="body"> 
-                <p>Lack of visibility into whether SMS templates are approved and ready for mass sending</p>
-              </div>
-            </li>
-            <li>
-              <div class="head">
-                <div class="title">Pain Point 2</div>
-              </div>
-              <div class="body"> 
-                <p>Delays or failed payouts caused by unapproved or non-compliant messaging.</p>
-              </div>
-            </li>
-            <li>
-              <div class="head">
-                <div class="title">Pain Point 3</div>
-              </div>
-              <div class="body"> 
-                <p>Reduced Payor confidence when payment communication status is unclear</p>
-              </div>
-            </li>
-            <li>
-              <div class="head">
-                <div class="title">Pain Point 4</div>
-              </div>
-              <div class="body"> 
-                <p>Higher abandonment rates in payment flows with too many steps or unclear instructions</p>
-              </div>
-            </li>
-          </ul>
+        
         </div>
       </div>
     </div>
 </section>
+
+
+<section class="mb-xl">
+  <div class="container">
+    <div class="grid content">
+      <div class="col-8">
+        <div class="content-block">
+          <h3 class="text-center">What We Learned</h3>
+          <h2 class="text-center">Designing for trust, not just efficiency</h2>
+      
+
+          <li> Trust matters more than speed in payments</li>
+          <p> Users were willing to take an extra step if it increased their confidence in the legitimacy of the payment request.</p>
+          
+          <li> Small friction can be beneficial</li>
+          <p> Identity verification, when clearly explained, reduced abandonment rather than increasing it.</p>
+          
+          <li> Clarity reduces support load</li>
+          <p> Clear summaries and error messages significantly reduced confusion-driven drop-offs and manual follow-ups.</p>
+          
+          <li> Familiar tools drive completion</li>
+          <p> Users completed payments more often when given options they already knew and trusted.</p>
+        
+        </div>
+      </div>
+    </div>
+</section>
+  
+ 
+
 
 
 
@@ -557,84 +335,7 @@
           </section>
 
 
-                    <!-- #MoSCow  -->
-                    <section class="mb-xl">
-                      <div class="container">
-                        <div class="grid">
-                          <div class="col-8">
-                            <div class="content-block">
-                              <h3>MoSCow</h3>
-                              <h2>Defining a focused MVP for SMS Templates</h2>
-                              <p>With a tight timeline for the SMS Automation MVP, defining a clear and realistic scope was critical. Using the MoSCoW framework, I prioritized the SMS Template features that would deliver the highest operational value while reducing manual effort and messaging errors.</p>
-        
-                              <p>The analysis showed that focusing on core template creation, dynamic variables, and approval-ready messaging would have the greatest impact—enabling faster payment notifications, consistent communication, and a scalable foundation for future automation within VerityPay.</b></p>
-                              <div class="design-process-grid">
-                                <div class="design-process-card">
-                                  <h4>Must</h4>
-                                 <ul>
-                                  <li>
-                                    Core SMS template creation with editable message structure.
-                                  </li>
-                                  <li>
-                                    Support for dynamic variables (e.g. payment amount, recipient name, reference ID).
-                                   </li>
-                                   <li>
-                                    Template validation to ensure Pilvo compliance and successful message delivery.
-                                   </li>
-                                   <li>
-                                    Clear template status (draft, active, disabled) to avoid sending incorrect messages.
-                                   </li>
-                                 </ul>
-                                </div>
-                                <div class="design-process-card">
-                                  <h4>Should</h4>
-                                  <ul>
-                                    <li>
-                                      Preview mode to visualize the final SMS before sending.
-                                    </li>
-                                    <li>
-                                      Basic approval or locking mechanism to prevent accidental edits to live templates.
-                                     </li>
-                                     <li>
-                                      Character count and SMS-length indicators to control costs and truncation.                                     
-                                    </li>
-                                   </ul>
-                                </div>
-                                <div class="design-process-card">
-                                  <h4>Could</h4>
-                                  <ul>
-                                    <li>
-                                      Pre-built template suggestions for common payment scenarios.
-                                    </li>
-                                    <li>
-                                      Optional tone or wording recommendations based on use case.
-                                     </li>
-                                     <li>
-                                      Duplicate template functionality to speed up creation.
-                                     </li>
-                                   </ul>
-                                </div>
-                                <div class="design-process-card">
-                                  <h4>Won't</h4>
-                                  <ul>
-                                    <li>
-                                      Advanced personalization per individual recipient.
-                                    </li>
-                                    <li>
-                                      Multi-channel templates beyond SMS (email, push, WhatsApp).
-                                     </li>
-                                     <li>
-                                      Complex automation rules outside the core payment flow.     
-                                     </li>
-                                   </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-            </section>
-
+          
                                       <!-- #Taskflows  -->
                                       <section class="mb-xl">
                                         <div class="container">
@@ -910,8 +611,8 @@ Contextual guidance and best-practice examples could further reduce ramp-up time
       <div class="col-8">
         <div class="content-block">
           <h3>Executive Summary (TL;DR)</h3>
-          <p>Redesigned Verity Pay’s SMS Template automation flow to improve usability, reduce errors, and increase user confidence in large-scale payment messaging.</p>
-          <p>Using user research and iterative wireframing, I simplified workflows, standardized templates, and introduced validation and preview states—creating a faster, clearer, and more reliable experience aligned with real operational needs.</p>
+          <p>Designed a secure, SMS-based payment flow that allows users to complete payments via mobile web without downloading an app. By combining lightweight identity verification, clear payment summaries, and trusted third-party providers (PayPal and Venmo), the solution reduced user uncertainty, minimized failed payments, and improved overall payment completion rates.</p>
+  
         </div>
       </div>
     </div>
