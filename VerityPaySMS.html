@@ -269,9 +269,9 @@
         <div class="col-8">
           <div class="content-block">
             <h3>Empathy Map</h3>
-            <h2>Understanding the Payment Automation Experience</h2>
-            <p>To deeply understand how businesses and payees interact with VerityPay’s SMS Automation, I created an empathy map capturing what users say, think, do, and feel throughout the payment flow. This exercise helped surface key pain points around trust, clarity, and confirmation, while also revealing strong motivations for speed, simplicity, and reliability—directly informing how SMS automation was designed and prioritized in the platform.</p>
-            <img  src="images/projects/VerityPayEmpathyMap.png">
+            <h2>User Trust and Emotional Barriers in SMS Payments</h2>
+            <p>This empathy map captures the emotional state, thoughts, and behaviors of users when they receive a payment request via SMS. It highlights initial skepticism, security concerns, and the need for reassurance, helping us design a flow that builds trust early and reduces hesitation throughout the payment experience.</p>
+            <img  src="images/projects/SMSMessageEmpathy.png">
           </div>
         </div>
       </div>
@@ -282,26 +282,21 @@
   <section class="mb-xl">
     <div class="container">
       <div class="grid content">
-        <div class="col-8">
+        <div class="col-4">
           <div class="content-block">
             <h3>User Personas</h3>
-            <h2>Understanding Our Users</h2>
-            <p>TTo build a solution truly aligned with student needs, I developed two key personas—one representing high school students (primary persona) and another representing university students (secondary persona).</p>
-            <p>These personas were informed by early research, surveys, and on-campus observations, allowing me to understand not only what students do inside the app, but why they behave that way.</p>
+            <h2>The Security-Conscious, Mobile-First Payer</h2>
+            <p>This persona represents users who value speed and convenience but are highly sensitive to trust and security when making payments. By understanding their goals, frustrations, and motivations, we were able to design a payment flow that feels legitimate, familiar, and easy to complete without unnecessary steps.</p>
+ 
           </div>
         </div>
         <div class="col-4">
           <div class="content-block">
             <h3>Primary Persona</h3>
-            <img src="images/projects/VerityPayPersona1.jpg" alt="Student Persona">
+            <img src="images/projects/SMSMessagePersona.png" alt="Student Persona">
           </div>
         </div>
-        <div class="col-4">
-          <div class="content-block">
-            <h3>Secondary Persona</h3>
-            <img src="images/projects/VerityPayPersona2.jpg" alt="Student Persona">
-          </div>
-        </div>
+
       </div>
   </section>
 
@@ -312,9 +307,9 @@
         <div class="col-8">
           <div class="content-block">
             <h3>Journey Map</h3>
-            <h2>Payment Workflow</h2>
-            <p>To better understand how stakeholders interact with VerityPay, I mapped the complete payment journey across key stages—from setup to reconciliation. This journey map highlights user goals, system touchpoints, and moments of friction within legacy processes, while revealing how SMS automation, real-time analytics, and centralized dashboards reduce operational overhead, improve accuracy, and increase user confidence throughout the payment lifecycle.</p>
-            <img src="images/projects/VerityPayuserJourney.png" alt="Student Persona">
+            <h2>From SMS Receipt to Payment Confirmation</h2>
+            <p>The user journey map outlines the end-to-end experience of completing a payment through an SMS link, identifying key touchpoints, emotional shifts, and friction points along the way. Mapping this journey allowed us to prioritize clarity, feedback, and trust signals at each stage, ultimately improving payment completion rates.</p>
+            <img src="images/projects/SMSMessageJourney.png" alt="Student Persona">
           </div>
         </div>
       </div>
@@ -328,34 +323,55 @@
                 <div class="col-8">
                   <div class="content-block">
                     <h3 class="text-center">Ideation Phase</h3>
-                    <h2 class="text-center">Understanding Student Needs Inside Ceux App</h2>
+                    <h2 class="text-center">Payor needs in sms</h2>
                   </div>
                 </div>
               </div>
           </section>
 
-
-          
-                                      <!-- #Taskflows  -->
-                                      <section class="mb-xl">
-                                        <div class="container">
-                                          <div class="grid">
-                                            <div class="col-8">
-                                              <div class="content-block">
-                                                <h3>Task flows</h3>
-                                                <h2>Mapping the SMS template workflow and defining the foundation for usability testing</h2>
-                                                <p>After identifying key friction points in the SMS automation experience through user research and refining the MVP scope using the MoSCoW matrix, I moved into outlining the core user interactions through task flows.</p>
+                           <!-- #LOW TO MID-FIDELITY WIREFRAMES -->
+                           <section class="mb-xl">
+                            <div class="container">
+                              <div class="grid content">
+                                <div class="col-4">
+                                  <div class="content-block">
+                                    <h3>Low to mid fidelity wireframes </h3>
+                                    <h2>Structure and usability for SMS templates</h2>
+                                    <p>This phase focused on clarifying user actions, sequencing critical steps, and ensuring the flow remained intuitive, trustworthy, and compliant across devices.</p>
                           
-                                                <p>These task flows were designed and prioritized based on their ability to support the primary persona’s goals—creating reliable SMS templates, reducing messaging errors, ensuring Pilvo compliance, and enabling fast, confident payment communication at scale.</p>
-
-                                                <p>The example shown illustrates one of these essential task flows: how an admin creates, previews, and activates an SMS payment template. This flow helped define the necessary screens, validations, and system logic—serving as a blueprint for the design phase and reinforcing VerityPay’s vision of a secure, low-friction, automation-first payment platform.</p>
-                                                <img class="col-8" src="images/projects/VeritypayMapping.png">
-                                              </div>
-                                            </div>
-                                          </div>
+                                    <h3>Persona Needs</h3>
+                                   
+                                    <ul class="">
+                                      <li class="">
+                                        <div class="head">
+                                          <div class="title">Trust and Clarity Drive Payment Completion</div>
                                         </div>
-                              </section>
-            
+                                        <div class="body"> 
+                                          <p>Users receiving payment requests via SMS need immediate reassurance that the message is legitimate and the payment process is secure. Clear content hierarchy, recognizable branding, and transparent payment summaries help reduce skepticism and encourage users to proceed with confidence.</p>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="head">
+                                          <div class="title">Familiarity Reduces Friction</div>
+                                        </div>
+                                        <div class="body"> 
+                                          <p>Providing well-known payment options and minimizing required inputs allows users to rely on tools they already trust. Predictable interaction patterns and clear success and error states reduce cognitive load and prevent abandonment during critical moments in the flow.</p>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                   
+                              <img class="col-8" src="images/projects/SMSMessageTaskflow.png">
+                                  </div>
+                                </div>
+                              </div>
+                  
+                   
+                            </div>
+                          </section>
+          
 
 
             <section class="mb-xl">
@@ -371,92 +387,7 @@
             </section>
 
 
-                            <!-- #LOW TO MID-FIDELITY WIREFRAMES -->
-          <section class="mb-xl">
-            <div class="container">
-              <div class="grid content">
-                <div class="col-4">
-                  <div class="content-block">
-                    <h3>Low to mid fidelity wireframes </h3>
-                    <h2>Establishing structure and usability for SMS templates</h2>
-                    <p>Transitioning from low- to mid-fidelity wireframes allowed me to shape the foundational layout of VerityPay’s SMS Template experience and evaluate how well each interaction supported real operational needs. This phase focused on organizing content clearly, validating critical user actions, and ensuring the workflow remained efficient, compliant, and scalable.</p>
-                    <p>Working at this level of fidelity made it possible to uncover usability issues early, adjust navigation patterns, and align the interface with both user expectations and Pilvo’s technical requirements—before investing in visual polish.</p>
-                    <h3>Persona Needs</h3>
-                   
-                    <ul class="">
-                      <li class="">
-                        <div class="head">
-                          <div class="title">Confidence and Oversight Are Essential</div>
-                        </div>
-                        <div class="body"> 
-                          <p>Users responsible for sending payments must feel certain about message content, timing, and recipients. Clear hierarchy, visible system states, and reliable preview functionality help minimize risk and reinforce trust in automated messaging.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="head">
-                          <div class="title">Consistency Minimizes Errors</div>
-                        </div>
-                        <div class="body"> 
-                          <p>Reusable and standardized SMS templates reduce variation and mistakes. Users prefer predictable structures that support accuracy while speeding up recurring tasks.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="head">
-                          <div class="title">Efficiency Without Overhead</div>
-                        </div>
-                        <div class="body"> 
-                          <p>The appeal of SMS automation lies in saving time. Users expect to move quickly through template creation and activation without navigating unnecessary steps or complex settings.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="head">
-                          <div class="title">Clear Feedback Builds Assurance</div>
-                        </div>
-                        <div class="body"> 
-                          <p>Immediate visibility into template status, delivery readiness, and message content helps users feel confident that payments will be sent correctly and on schedule.</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="content-block">
-                    <h3>Opportunities</h3>
-                    
-              <ul class="">
-                <li class="">
-                  <div class="head">
-                    <div class="title">Streamline the Template Workflow</div>
-                  </div>
-                  <div class="body"> 
-                    <p>There is a clear opportunity to simplify how users move through the SMS template process, making it easier to understand and use—particularly for new users..</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="head">
-                    <div class="title">Make Compliance More Transparent</div>
-                  </div>
-                  <div class="body"> 
-                    <p>Surfacing Pilvo constraints directly in the interface (such as formatting rules and character limits) helps guide users rather than blocking them.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="head">
-                    <div class="title">Strengthen Visual Clarity</div>
-                  </div>
-                  <div class="body"> 
-                    <p>A more refined and modern visual approach reinforces credibility and positions VerityPay as a robust, enterprise-grade payment platform.</p>
-                  </div>
-                </li>
-              </ul>
-              <img class="col-8" src="images/projects/VeritypayTaskflow.png">
-                  </div>
-                </div>
-              </div>
-  
-   
-            </div>
-          </section>
+ 
 
           <section class="mb-xl">
             <div class="container">
@@ -479,28 +410,18 @@
               <div class="col-4">
                 <div class="content-block">
                   <h3>High-fidelity wireframes</h3>
-                  <h2>Refining the SMS template experience for confidence and scale</h2>
-                  <p>Moving into high-fidelity wireframes allowed me to translate validated structures and workflows into a polished, production-ready interface. At this stage, the focus shifted toward visual clarity, hierarchy, and feedback—ensuring that every interaction felt intentional, trustworthy, and easy to understand.</p>
+                  <h2>Delivering a trustworthy and frictionless SMS payment experience</h2>
+                  <p>The high-fidelity designs translated validated wireframe concepts into a polished, production-ready experience that emphasizes trust, clarity, and completion at every step of the SMS payment flow. Visual hierarchy, spacing, and typography were refined to guide users naturally from link entry to payment confirmation without introducing cognitive overload.</p>
 
-                  <p>Design decisions at this level emphasized readability, status visibility, and error prevention, while reinforcing Pilvo compliance through subtle UI cues such as inline validations, character limits, and delivery-ready indicators. The result was an interface that balanced flexibility with control, enabling users to confidently manage SMS templates at scale.</p>
+                  <p>At this stage, branding, microcopy, and feedback states were intentionally designed to reinforce legitimacy and reduce anxiety around mobile payments. Clear confirmation messages, recognizable payment provider handoffs, and consistent UI patterns ensured users always understood where they were in the process and what action was required next.</p>
 
-                  <p>Key Design Considerations
-
-                  <ul>
-                    <li>
-                      Clear visual hierarchy to prioritize message content and critical actions
-                    </li>
-                    <li>
-                      Strong affordances for template states (draft, active, disabled)
-                    </li>
-                    <li>
-                      Inline feedback and validation to prevent errors before sending</li>
+                 <p>The final outcome is a cohesive, mobile-first payment experience that balances security and ease of use—helping users complete payments confidently while enabling businesses to collect payments efficiently at scale.</p>
 
                 </div>
               </div>
               <div class="col-4">
                 <div class="content-block">
-                  <img class="col-8" src="images/projects/VerityPayHiFI.png">
+                  <img class="col-8" src="images/projects/SMSMessageHiFi.png">
                 </div>
               </div>
             </div>
@@ -513,29 +434,27 @@
       <div class="col-8">
         <div class="content-block">
           <h3 class="text-center">Results & Impact</h3>
-          <h2 class="text-center">Delivering a safer, faster, and more scalable SMS automation experience</h2>
-        <ul>
-          <li>
-            Reduced cognitive load`
-            Clear structure, predictable layouts, and focused actions helped users understand the system faster and reduce hesitation when creating or activating templates.
-          </li>
-          <li>
-            Higher confidence in message delivery
+          <h2 class="text-center">Safer, faster, and more reliable SMS payment experience</h2>
+          <h5>Higher confidence in message delivery</h5>
+          <p>
             Template previews, validation states, and visible status indicators reinforced trust, minimizing the fear of sending incorrect or non-compliant messages.
-          </li>
-          <li>
-            Faster template creation and management
-            Streamlined flows enabled users to create, edit, and deploy SMS templates with fewer steps, supporting high-volume payment operations without added complexity.
-          </li>
-          <li>
-            Improved consistency across communications
-            Standardized templates ensured accurate, repeatable payment messaging, reducing errors and maintaining a professional, compliant tone across all SMS interactions.
-          </li>
-          <li>
-            Stronger foundation for future automation
-            The redesigned system established scalable patterns that can support future enhancements such as advanced automation rules, analytics, and personalization—without requiring structural rework.
-          </li>
-        </ul>
+          </p>
+          
+          <h5>Improved payment completion rates</h5>
+          <p>
+            By removing unnecessary friction—such as app downloads or manual data entry—the redesigned flow enabled more users to successfully complete payments on their first attempt.
+          </p>
+          
+          <h5>Fewer failed payments and support requests</h5>
+          <p>
+            Clear error states, confirmation messages, and explicit system feedback reduced confusion, failed transactions, and the need for manual follow-ups.
+          </p>
+          
+          <h5>Scalable foundation for future payment features</h5>
+          <p>
+            The final design established consistent interaction patterns that can support additional payment methods, enhanced security checks, or automation features without reworking the core flow.
+          </p>
+          
         
         </div>
       </div>
@@ -549,24 +468,28 @@
       <div class="col-8">
         <div class="content-block">
           <h3>Learnings & Reflections</h3>
-          <h2>Designing automation requires trust, not just efficiency</h2>
-          <p>This project reinforced that designing for automation—especially in financial contexts—goes beyond speed and functionality. Users need clarity, predictability, and reassurance at every step.</p>
-          <li>
-          Confidence is a core UX requirement
-          Even small uncertainties in message content or delivery timing create hesitation. Explicit states, previews, and confirmations proved just as important as automation itself.
-          </li>
-          <li>
-          Constraints sharpen design decisions
-          Working within Pilvo’s technical and compliance limitations helped focus the experience on what truly mattered, eliminating unnecessary flexibility that could increase risk.
-          </li>
-          <li>
-          Standardization enables scale
-          Reusable patterns and consistent structures reduced errors while allowing the system to grow without adding cognitive or operational complexity.
-          </li>
-          <li>
-          Early validation saves future rework
-          Low- and mid-fidelity testing surfaced critical issues before visual refinement, protecting both development time and product integrity.
-          </li>
+          <h2>
+            Payment experiences requires trust, not just speed</h2>
+            <h5>Trust is a primary UX requirement</h5>
+            <p>
+              Even small uncertainties around identity verification or payment confirmation can stop users from completing a transaction. Clear explanations, previews, and confirmation states were critical.
+            </p>
+            
+            <h5>Security friction must feel intentional</h5>
+            <p>
+              Users accepted verification steps when they were clearly communicated and felt proportional to the risk, proving that the right kind of friction can increase confidence rather than reduce conversion.
+            </p>
+            
+            <h5>Constraints improved focus</h5>
+            <p>
+              Working within technical, security, and compliance constraints helped prioritize essential interactions and avoid unnecessary complexity.
+            </p>
+            
+            <h5>Early validation prevented costly rework</h5>
+            <p>
+              Testing concepts at low and mid fidelity surfaced critical trust and clarity issues early, protecting both development time and product integrity.
+            </p>
+            
         </div>
       </div>
     </div>
@@ -580,24 +503,27 @@
       <div class="col-8">
         <div class="content-block">
           <h3>Next Steps</h3>
-          <h2>Expanding the system while preserving simplicity</h2>
-          <p>With more time and continued iteration, the SMS Templates experience could evolve further:</p>
-          <li>
-          Template performance insights
-Add analytics to show delivery success, timing effectiveness, and usage trends per template.
-          </li>
-          <li>
-Advanced automation logic
-Enable conditional rules (e.g., resend on failure, time-based triggers) while maintaining clear safeguards.
-          </li>
-          <li>
-Role-based controls
-Introduce permissions to ensure sensitive templates can only be edited or activated by authorized users.
-          </li>
-          <li>
-Guided onboarding for first-time users
-Contextual guidance and best-practice examples could further reduce ramp-up time and prevent early mistakes.
-          </li>
+          <h2>Evolving the SMS payment flow while preserving simplicity</h2>
+          <h5>Payment analytics and insights</h5>
+<p>
+  Provide visibility into payment completion rates, drop-off points, and timing effectiveness for SMS payment requests.
+</p>
+
+<h5>Advanced retry and automation logic</h5>
+<p>
+  Introduce controlled automation such as payment reminders or retries on failure, while maintaining clear user safeguards.
+</p>
+
+<h5>Expanded payment methods</h5>
+<p>
+  Support additional trusted providers or regional payment options without compromising clarity or security.
+</p>
+
+<h5>Post-payment confirmation and receipts</h5>
+<p>
+  Offer optional downloadable receipts or email confirmations for added reassurance and record keeping.
+</p>
+
         </div>
       </div>
     </div>
@@ -611,7 +537,7 @@ Contextual guidance and best-practice examples could further reduce ramp-up time
       <div class="col-8">
         <div class="content-block">
           <h3>Executive Summary (TL;DR)</h3>
-          <p>Designed a secure, SMS-based payment flow that allows users to complete payments via mobile web without downloading an app. By combining lightweight identity verification, clear payment summaries, and trusted third-party providers (PayPal and Venmo), the solution reduced user uncertainty, minimized failed payments, and improved overall payment completion rates.</p>
+          <p>Designed a secure, SMS-based payment experience that enables users to complete payments through a mobile web flow without downloading an app. By combining lightweight identity verification, clear payment summaries, and trusted third-party providers such as PayPal and Venmo, the solution reduced uncertainty, minimized failed transactions, and improved overall payment completion rates.</p>
   
         </div>
       </div>
